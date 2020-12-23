@@ -1,9 +1,10 @@
 <img src="ccdesign1.jpg" alt="Carbon Commerce" width="500" height="140">
+
+
+
 <!DOCTYPE html>
 <html style="overflow-x:hidden;">
 <head>
-<script type="text/javascript" src="lydiahammond.github.io/usmap.js"></script>
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -78,7 +79,15 @@ body {
 
   <div class="navbar">
     <a href="main.html">Home</a>
-    <a href="allprojects.html">All Projects</a>
+    <div class="dropdown">
+      <button class="dropbtn">All Projects
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="allprojects.html">List View</a>
+        <a href="map.html">Map View</a>
+      </div>
+    </div>
     <div class="dropdown">
       <button class="dropbtn">Marketplace
         <i class="fa fa-caret-down"></i>
@@ -90,7 +99,16 @@ body {
   </div>
     <a href="contact.html">Contact Me</a>
 </div>
-<div id="map"></div>
+
+<h2>Project Map (none added yet)</h2>
+
+<div>
+     <iframe width="700" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=700&cp=37.8~-95.57&lvl=4&typ=d&sty=r&src=SHELL&FORM=MBEDV8&sp=point.61_149_AfognakForestCarbonProject_notes_https://registry.verra.org/app/projectDetail/VCS/872_https://image.shutterstock.com/image-vector/map-pin-flat-design-style-260nw-291884084.jpg" scrolling="no">
+     </iframe>
+
+   </div>
+
+
 
 
 </body>
