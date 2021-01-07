@@ -22,6 +22,7 @@ body {
 .navbar {
   overflow: hidden;
   background-color: #333;
+
 }
 
 .navbar a {
@@ -104,7 +105,7 @@ body {
 
 #myTable {
   position: relative;
-  bottom: 350px;
+  bottom: 25%;
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
@@ -159,7 +160,7 @@ button {
 
 /* The container */
 .container {
-  display: block;
+  display: inline-block;
   position: relative;
   padding-left: 30px;
   margin-bottom: 12px;
@@ -169,6 +170,7 @@ button {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
 }
 
 /* Hide the browser's default checkbox */
@@ -225,6 +227,18 @@ button {
   transform: rotate(45deg);
 }
 
+.column {
+  position: relative;
+  float: left;
+  width: 8%;
+  padding: 10px;
+  left:42%;
+  bottom: 25%;
+
+}
+
+
+
 
 
 
@@ -261,77 +275,64 @@ button {
 <input type="text" id="myInputnames" onkeyup="myFunctionNames()" placeholder="Search by project name.." title="Type in a name">
 <br><input type="text" id="myInputdevs" onkeyup="myFunctionDevs()" placeholder="Search by developer.." title="Type in a developer">
 
-<h3 style="position:relative;left:42%;bottom:23%">Project Types</h3>
+<h3 style="position:relative;left:52%;bottom:23%">Project Types</h3>
 
-<label class="container" style="left:42%;bottom:23%">All
+<div class="column">
+<label class="container">All
   <input type="checkbox" id="myCheckAllT" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-<label class="container" style="left:42%;bottom:23%">Forest Carbon
+<label class="container">Forest
   <input type="checkbox" id="myCheckForest" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-<label class="container" style="left:42%;bottom:23%">Livestock Waste Management
+<label class="container">Livestock
   <input type="checkbox" id="myCheckLivestock" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-<label class="container" style="left:42%;bottom:23%">Agriculture
+<label class="container">Agriculture
   <input type="checkbox" id="myCheckAgriculture" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-<label class="container" style="left:42%;bottom:23%">Ozone Depleting Substances
+</div>
+<div class="column"; style="width:12%";>
+<label class="container">Ozone Depleting Substances
   <input type="checkbox" id="myCheckOzone" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-<label class="container" style="left:42%;bottom:23%">Landfill Gas Capture/Combustion
+<label class="container">Landfill
   <input type="checkbox" id="myCheckLandfill" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-<label class="container" style="left:42%;bottom:23%">Energy Industry
+<label class="container">Energy Industry
   <input type="checkbox" id="myCheckEnergy" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-<label class="container" style="left:42%;bottom:23%">Fossil Fuel
+<label class="container">Fossil Fuel
   <input type="checkbox" id="myCheckFuel" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-<label class="container" style="left:42%;bottom:23%">Mining
+</div>
+<div class="column">
+<label class="container">Mining
   <input type="checkbox" id="myCheckMine" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-<label class="container" style="left:42%;bottom:23%">Industrial
+<label class="container">Industrial
   <input type="checkbox" id="myCheckIndustrial" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-<label class="container" style="left:42%;bottom:23%">Compost/Digestion
+<label class="container">Compost/Digestion
   <input type="checkbox" id="myCheckComp" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-<label class="container" style="left:42%;bottom:23%">Transportation
+<label class="container">Transportation
   <input type="checkbox" id="myCheckTransportation" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+</div>
 
 
-
-<h3 style="position:relative;left:10%;bottom:51%">Verifiers</h3>
-
-<label class="container" style="left:10%;bottom:51%">All
-  <input type="checkbox" id="myCheckAllV" onclick="myFunctionChecksV()">
-  <span class="checkmark"></span>
-</label>
-<label class="container" style="left:10%;bottom:51%">ACR
-  <input type="checkbox" id="myCheckACR" onclick="myFunctionChecksV()">
-  <span class="checkmark"></span>
-</label>
-<label class="container" style="left:10%;bottom:51%">CAR
-  <input type="checkbox" id="myCheckCAR" onclick="myFunctionChecksV()">
-  <span class="checkmark"></span>
-</label>
-<label class="container" style="left:10%;bottom:51%">Verra
-  <input type="checkbox" id="myCheckVerra" onclick="myFunctionChecksV()">
-  <span class="checkmark"></span>
-</label>
 
 
 <table class="table table-responsive table-hover">
@@ -1669,96 +1670,6 @@ function myFunctionChecksT() {
     }
 }
 
-
-
-function myFunctionChecksV() {
-  var checks, acr, car, verra, table, tr, td, i, txtValue, n, checkn, count, all;
-  checks = [ ];
-
-  all = document.getElementById("myCheckAllV");
-  acr = document.getElementById("myCheckACR");
-  car = document.getElementById("myCheckCAR");
-  verra = document.getElementById("myCheckVerra");
-
-
-  if (all.checked == true){
-    acr.checked = true;
-    car.checked = true;
-    verra.checked = true;
-  }
-
-
-  if (acr.checked == true){
-    checks.push("ACR");
-  }
-  if (acr.checked == false){
-    index = checks.indexOf("ACR");
-    if (index > -1) {
-      checks = checks.splice(index, 1);
-    }
-  }
-
-
-  if (car.checked == true){
-    checks.push("CAR");
-  }
-  if (car.checked == false){
-    index = checks.indexOf("CAR");
-    if (index > -1) {
-      checks = checks.splice(index, 1);
-    }
-  }
-
-
-  if (verra.checked == true){
-    checks.push("VERRA");
-  }
-  if (verra.checked == false){
-    index = checks.indexOf("VERRA");
-    if (index > -1) {
-      checks = checks.splice(index, 1);
-    }
-  }
-
-
-  if (checks.length > 0){
-
-    table = document.getElementById("myTable");
-    tr = table.getElementsByTagName("tr");
-
-      for (i = 0; i < tr.length; i++) {
-        count = 0;
-        td = tr[i].getElementsByTagName("td")[2];
-        if (td) {
-          for (n = 0; n < checks.length; n++) {
-            checkn = checks[n];
-            txtValue = td.textContent || td.innerText;
-            if (count != 0) {
-              break;
-            }
-            if (txtValue.toUpperCase().indexOf(checkn) > -1) {
-              tr[i].style.display = "";
-              count++;
-              break;
-            }
-          }
-          if (count == 0) {
-            tr[i].style.display = "none";
-          }
-
-        }
-      }
-
-    }
-    else {
-      table = document.getElementById("myTable");
-      tr = table.getElementsByTagName("tr");
-      for (i = 0; i < tr.length; i++) {
-        tr[i].style.display = "";
-
-      }
-    }
-}
 
 
 
