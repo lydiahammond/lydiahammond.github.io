@@ -410,7 +410,7 @@ button {
 <button class="open-button" onclick="openForm()" style="font-size:18px">List Your Credits</button>
 
 <div class="form-popup" id="myForm">
-  <form action="mailto:lydiah123@gmail.com" enctype="text/plain" class="form-container" onsubmit="location.href='thanks.html';">
+  <form action="mailto:lydiah123@gmail.com" enctype="multipart/form-data" class="form-container" method="post">
     <h3>List Credits</h3>
 
     <label for="name"><b>Your Name</b></label>
@@ -423,7 +423,7 @@ button {
     <input type="text" placeholder="Enter Email" name="email" required>
 
     <label for="docs"><b>Documents</b></label>
-    <input type="file" placeholder="Submit Documents" name="docs" required>
+    <input type="file" placeholder="Submit Documents" name="docs" multiple required>
 
     <button type="submit" class="btn">Submit</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
