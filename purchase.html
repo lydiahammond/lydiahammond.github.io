@@ -1,4 +1,10 @@
+
+
+
+
 <img src="ccdesign1.jpg" alt="Carbon Commerce" width="500" height="140">
+
+
 
 <!DOCTYPE html>
 <html style="overflow-x:hidden;">
@@ -10,11 +16,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   max-width: 100%;
   overflow-x: hidden;
+
 }
 
 .navbar {
   overflow: hidden;
   background-color: #333;
+
 }
 
 .navbar a {
@@ -71,6 +79,252 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
+#myInputnames {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 40%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myInputdevs {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 40%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  position: relative;
+  bottom: 25%;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 17px;
+}
+
+#myTable th {
+  text-align: left;
+  padding: 20px;
+  white-space:wrap;
+}
+
+#myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header {
+  background-color: #CEE3F6;
+}
+
+#myTable tr:hover {
+  background-color: #CEE3F6;
+}
+table {
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+table td:last-child {
+    word-break: break-all;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* The container */
+.container {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.column {
+  position: relative;
+  float: left;
+  width: 8%;
+  padding: 10px;
+  left:42%;
+  bottom: 25%;
+
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 20px 5px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 58%;
+  left: 82%;
+  width: 15%;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: absolute;
+  bottom: 50%;
+  left: 79%;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  max-width: 20%;
+
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 100%;
+  max-height: 100%;
+
+
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin: 1px 0 10px 0;
+  border: none;
+  background: #f1f1f1;
+
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  margin-bottom:0px;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+  position: absolute;
+  margin-left: 1%;
+  width: 45%;
+  margin-bottom: 0px;
+
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+
 </style>
 </head>
 <body>
@@ -99,7 +353,94 @@ body {
 </div>
 
 <h3>Marketplace</h3>
-<p>Purchase Carbon Credits</p>
+
+
+<input type="text" id="myInputnames" onkeyup="myFunctionNames()" placeholder="Search by project name.." title="Type in a name">
+<br><input type="text" id="myInputdevs" onkeyup="myFunctionDevs()" placeholder="Search by developer.." title="Type in a developer">
+
+<h3 style="position:relative;left:52%;bottom:23%">Project Types</h3>
+
+<div class="column">
+<label class="container">All
+  <input type="checkbox" id="myCheckAllT" onclick="myFunctionChecksT()">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Forest
+  <input type="checkbox" id="myCheckForest" onclick="myFunctionChecksT()">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Livestock
+  <input type="checkbox" id="myCheckLivestock" onclick="myFunctionChecksT()">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Agriculture
+  <input type="checkbox" id="myCheckAgriculture" onclick="myFunctionChecksT()">
+  <span class="checkmark"></span>
+</label>
+</div>
+<div class="column"; style="width:12%";>
+<label class="container">Ozone Depleting Substances
+  <input type="checkbox" id="myCheckOzone" onclick="myFunctionChecksT()">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Landfill
+  <input type="checkbox" id="myCheckLandfill" onclick="myFunctionChecksT()">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Energy Industry
+  <input type="checkbox" id="myCheckEnergy" onclick="myFunctionChecksT()">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Fossil Fuel
+  <input type="checkbox" id="myCheckFuel" onclick="myFunctionChecksT()">
+  <span class="checkmark"></span>
+</label>
+</div>
+<div class="column">
+<label class="container">Mining
+  <input type="checkbox" id="myCheckMine" onclick="myFunctionChecksT()">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Industrial
+  <input type="checkbox" id="myCheckIndustrial" onclick="myFunctionChecksT()">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Compost/Digestion
+  <input type="checkbox" id="myCheckComp" onclick="myFunctionChecksT()">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Transportation
+  <input type="checkbox" id="myCheckTransportation" onclick="myFunctionChecksT()">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+
+<a href="sell.html"><button class="open-button" style="font-size:18px">List Your Credits</button></a>
+
+
+
+
+
+
+
+<table class="table table-responsive table-hover">
+<table id="myTable">
+  <tr class="header">
+
+    <th style="width:20%">Project Name</th>
+    <th style="width:15%">Project Developer</th>
+    <th>Verifier</th>
+    <th>Project Type</th>
+    <th>Credits Available</th>
+    <th>Price Per Credit</th>
+    <th>Additional Information</th>
+    <th><a href="sell.html">Make an Offer</th>
+  </tr>
+
+
+
+
 
 </body>
 </html>
