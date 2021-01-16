@@ -86,9 +86,10 @@ body {
 
 
 #myInputcredits {
-  width: 35%;
-  font-size: 16px;
   color: black;
+  width: 35%;
+  padding-left: 5%;
+  font-size: 16px;
   padding: 12px 20px 12px;
   border: inherit;
   box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.2);
@@ -97,6 +98,18 @@ body {
 }
 
 #myInputdevs {
+  color: black;
+  width: 35%;
+  padding-left: 5%;
+  font-size: 16px;
+  padding: 12px 20px 12px;
+  border: inherit;
+  box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.2);
+  margin-left: 10px;
+  margin-bottom: 12px;
+}
+
+#myInputnames {
   color: black;
   width: 35%;
   padding-left: 5%;
@@ -141,6 +154,7 @@ body {
 
 #myTable tr.header {
   background-color: #E8BE7F;
+  width: 100%;
 
 }
 
