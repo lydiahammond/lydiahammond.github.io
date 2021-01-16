@@ -3,29 +3,34 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   max-width: 100%;
   overflow-x: hidden;
+  text-shadow: 0px 0px 10px white;
 
 }
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
-  margin-top:11%;
+  margin-top:8.5%;
+  z-index:999;
+  color: black;
+  text-shadow: 0px 0px 10px white;
 
 }
 
 .navbar a {
   float: left;
-  font-size: 16px;
-  color: white;
+  color: black;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
   position:relative;
+  font-weight:bold;
+  text-shadow: 0px 0px 10px white;
 }
 
 .dropdown {
   float: left;
   overflow: hidden;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  text-shadow: 0px 0px 10px white;
 }
 
 .dropdown .dropbtn {
@@ -33,23 +38,25 @@ body {
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
+  padding: 13px 16px;
+  background-color:inherit;
+  color: black;
+  font-weight: bold;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: #7788C7;
+
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: inherit;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 9;
 }
 
 .dropdown-content a {
@@ -59,53 +66,66 @@ body {
   text-decoration: none;
   display: block;
   text-align: left;
+  z-index:9;
 }
 
 .dropdown-content a:hover {
   background-color: #ddd;
+  z-index:9;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
+  z-index:9;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 0.5; /* Firefox */
 }
 
 
 #myInputcredits {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 40%;
+  width: 35%;
   font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
+  color: black;
+  padding: 12px 20px 12px;
+  border: inherit;
+  box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.2);
+  margin-left: 10px;
   margin-bottom: 12px;
 }
 
 #myInputdevs {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 40%;
+  color: black;
+  width: 35%;
+  padding-left: 5%;
   font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
+  padding: 12px 20px 12px;
+  border: inherit;
+  box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.2);
+  margin-left: 10px;
   margin-bottom: 12px;
 }
 
 #myTable {
   position: absolute;
-  top: 48%;
+  left: 0;
+  top: 43%;
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
   font-size: 17px;
   z-index: 1;
+
 }
 
 #myTable th {
   text-align: left;
   padding: 20px;
   white-space:wrap;
+  background-color: #E8BE7F;
+
 }
 
 #myTable td {
@@ -115,11 +135,13 @@ body {
 }
 
 #myTable tr {
-  border-bottom: 1px solid #ddd;
+
+
 }
 
 #myTable tr.header {
-  background-color: #CEE3F6;
+  background-color: #E8BE7F;
+
 }
 
 #myTable tr:hover {
@@ -191,7 +213,9 @@ button {
   left: 0;
   height: 15px;
   width: 15px;
-  background-color: #eee;
+  background-color: inherit;
+
+  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
 }
 
 
@@ -201,7 +225,7 @@ button {
 
 
 .container input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: gray;
 }
 
 
@@ -216,18 +240,6 @@ button {
   display: block;
 }
 
-.container .checkmark:after {
-  left: 4px;
-  top: 1px;
-  width: 3px;
-  height: 8px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
 .column {
   position: relative;
   float: left;
@@ -239,16 +251,18 @@ button {
 }
 
 .open-button {
-  background-color: #555;
-  color: white;
+  background-color: inherit;
+  color: black;
   padding: 20px 5px;
-  border: none;
+  border: inherit;
+  font-weight:bold;
   cursor: pointer;
   opacity: 0.8;
   position: absolute;
   bottom: 60%;
   left: 82%;
   width: 15%;
+  box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.2);
 }
 
 .btn {
@@ -293,6 +307,7 @@ button {
 
 p {
   font-size:15px;
+
 }
 input {
   width:100%;
