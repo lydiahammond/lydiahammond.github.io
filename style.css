@@ -124,7 +124,7 @@ body {
 #myTable {
   position: absolute;
   left: 0;
-  top: 43%;
+  top: 40%;
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
@@ -319,8 +319,6 @@ button {
   overflow: hidden;
 }
 
-p {
-  font-size:15px;
 
 }
 input {
@@ -329,4 +327,36 @@ input {
   padding:5px;
   margin-bottom:5%;
 
+}
+
+
+
+p {
+  position: absolute;
+  top: 20%;
+  right: 4%;
+  border: 10px solid;
+  border-color: #DFC9C9;
+  border-radius: 20px;
+  padding: 1%;
+  padding-bottom: 4%;
+  background-color: white;
+  text-align:center;
+  font-weight: bold;
+  font-size: 22px;
+  box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.2);
+  font-variant: small-caps;
+  background-color: inherit;
+}
+
+p1 {
+  position: absolute;
+  top: 26%;
+  right: 7%;
+  padding: 2%;
+  width: ;
+  text-align:center;
+  font-weight: bold;
+  font-size: 30px;
+  font-variant: small-caps;
 }
