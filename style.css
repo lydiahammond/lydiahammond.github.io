@@ -9,6 +9,7 @@ body {
 
 .navbar {
   overflow: hidden;
+  position: fixed;
   margin-top:8.5%;
   z-index:999;
   color: black;
@@ -29,11 +30,13 @@ body {
 .dropdown {
   float: left;
   overflow: hidden;
+  z-index: 1000;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   text-shadow: 0px 0px 10px white;
 }
 
 .dropdown .dropbtn {
+  z-index: 9999;
   font-size: 16px;
   border: none;
   outline: none;
@@ -52,7 +55,7 @@ body {
 
 .dropdown-content {
   display: none;
-  position: absolute;
+  position: fixed;
   background-color: inherit;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -121,70 +124,6 @@ body {
   margin-bottom: 12px;
 }
 
-#myTable {
-  position: absolute;
-  left: 0;
-  top: 40%;
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 17px;
-  z-index: 1;
-
-}
-
-#myTable th {
-  text-align: left;
-  padding: 20px;
-  white-space:wrap;
-  background-color: #E8BE7F;
-
-}
-
-#myTable td {
-  text-align: left;
-
-
-}
-
-#myTable tr {
-
-
-}
-
-#myTable tr.header {
-  background-color: #E8BE7F;
-  width: 100%;
-
-}
-
-#myTable tr:hover {
-  background-color: #CEE3F6;
-}
-table {
-  border-spacing: 0;
-  width: 100%;
-  border: none;
-}
-
-th, td {
-  text-align: left;
-  padding: 16px;
-}
-
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-tr:nth-child(odd) {
-  background-color: white;
-}
-
-table td:last-child {
-    margin:0;
-    padding-bottom:0;
-}
 
 button {
   cursor: pointer;
@@ -194,10 +133,10 @@ button {
 
 
 .container {
-  left: -10;
+  left: 0;
   display: inline-block;
   position: relative;
-  top: 5;
+  top: 30%;
   padding-left: 30px;
   margin-left: 1%;
   margin-top: 5%;
@@ -254,13 +193,23 @@ button {
   display: block;
 }
 
+.ptypes {
+  position: fixed;
+  z-index: 7;
+  float: left;
+  width: 100%;
+  height: 30%;
+}
+
+
+
 .column {
   position: relative;
   float: left;
   width: 8%;
   padding: 10px;
   left:42%;
-  bottom: 25%;
+  top: 55%;
 
 }
 
@@ -273,7 +222,7 @@ button {
   cursor: pointer;
   opacity: 0.8;
   position: absolute;
-  bottom: 60%;
+  top: 50%;
   left: 82%;
   width: 15%;
   box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.2);
@@ -296,7 +245,7 @@ button {
 
 .accordion {
   background-color: #c6ecd9;
-  left: 50%;
+
   color: #476b6b;
   cursor: pointer;
   padding: 25px;
@@ -313,8 +262,9 @@ button {
 }
 
 .panel {
-  padding: 10%;
+  padding: 5%;
   display: none;
+  width: 100%;
 
   overflow: hidden;
 }
@@ -326,15 +276,14 @@ input {
   font-size:14px;
   padding:5px;
   margin-bottom:5%;
-
 }
 
 
 
 p {
   position: absolute;
-  top: 20%;
-  right: 4%;
+  top: 50%;
+  right: 5%;
   border: 10px solid;
   border-color: #DFC9C9;
   border-radius: 20px;
@@ -351,8 +300,8 @@ p {
 
 p1 {
   position: absolute;
-  top: 26%;
-  right: 7%;
+  top: 70%;
+  right: 8%;
   padding: 2%;
   width: ;
   text-align:center;
