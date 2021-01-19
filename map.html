@@ -1,4 +1,6 @@
-<img src="ccdesign1.jpg" alt="Carbon Commerce" width="500" height="140">
+<img src="bgsky.JPG" alt="Sky Background" width="100%" height="100%" style="position:fixed; z-index: -100; top:0; left:0;">
+<img src="skypatrickjanser.jpg" alt="Sky" width="100%" height="20%" style="position:fixed; z-index: 5; top:0; left:0;">
+<img src="headerimage.png" alt="Carbon Commerce" width="520" height="100" style="position:fixed; z-index: 10;">
 
 
 
@@ -6,143 +8,20 @@
 <html style="overflow-x:hidden;">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+
 <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  max-width: 100%;
-  overflow-x: hidden;
-}
 
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
+  p {
+    z-index: 999;
+    width: 20%;
+    top: 40%;
+    left: 70%;
+    line-height: 250%;
+    border: none;
+    padding-bottom: 0;
 
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #7788C7;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* The container */
-.container {
-  display: block;
-  position: relative;
-  left: 55%;
-  padding-left: 30px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 15px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-}
-
-/* Hide the browser's default checkbox */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 15px;
-  width: 15px;
-  background-color: #eee;
-}
-
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #2196F3;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-  left: 4px;
-  top: 1px;
-  width: 3px;
-  height: 8px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
+  }
 
 
 </style>
@@ -150,7 +29,11 @@ body {
 <body>
 
   <div class="navbar">
-    <a href="main.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn" onclick="main.html">
+        <a href="main.html">Home</a>
+      </button>
+    </div>
     <div class="dropdown">
       <button class="dropbtn">Our Service
         <i class="fa fa-caret-down"></i>
@@ -161,7 +44,7 @@ body {
     </div>
   </div>
     <div class="dropdown">
-      <button class="dropbtn">All Projects
+      <button class="dropbtn" style="box-shadow:none;">All Projects
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
@@ -178,76 +61,30 @@ body {
         <a href="sell.html">Sell Carbon Credits</a>
     </div>
   </div>
-    <a href="contact.html">Contact Me</a>
+  <div class="dropdown">
+    <button class="dropbtn">
+      <a href="contact.html">Contact Me</a>
+    </button>
+  </div>
   </div>
 
 
-<h2>Project Map</h2>
-<h3 style="position:relative;left:55%;">Project Types</h3>
-
-<div>
-<label class="container">All
-  <input type="checkbox" id="myCheckAllT" onclick="myFunctionChecksT()">
-  <span class="checkmark"></span>
-</label>
-<label class="container"><img src="Forest image.png" height="20" width="83">
-  <input type="checkbox" id="myCheckForest" onclick="myFunctionChecksT()">
-  <span class="checkmark"></span>
-</label>
-<label class="container"><img src="livestockimage.png" height="20" width="110">
-  <input type="checkbox" id="myCheckLivestock" onclick="myFunctionChecksT()">
-  <span class="checkmark"></span>
-</label>
-<label class="container"><img src="agricultureimage.png" height="20" width="110">
-  <input type="checkbox" id="myCheckAgriculture" onclick="myFunctionChecksT()">
-  <span class="checkmark"></span>
-</label>
-
-<label class="container"><img src="ods image.png" height="20" width="200">
-  <input type="checkbox" id="myCheckOzone" onclick="myFunctionChecksT()">
-  <span class="checkmark"></span>
-</label>
-<label class="container"><img src="landfillimage.png" height="20" width="100">
-  <input type="checkbox" id="myCheckLandfill" onclick="myFunctionChecksT()">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Energy Industry
-  <input type="checkbox" id="myCheckEnergy" onclick="myFunctionChecksT()">
-  <span class="checkmark"></span>
-</label>
-<label class="container"><img src="oilimage.png" height="20" width="65">
-  <input type="checkbox" id="myCheckFuel" onclick="myFunctionChecksT()">
-  <span class="checkmark"></span>
-</label>
-
-<label class="container"><img src="mineimage.png" height="20" width="83">
-  <input type="checkbox" id="myCheckMine" onclick="myFunctionChecksT()">
-  <span class="checkmark"></span>
-</label>
-<label class="container"><img src="industrialimage.png" height="20" width="110">
-  <input type="checkbox" id="myCheckIndustrial" onclick="myFunctionChecksT()">
-  <span class="checkmark"></span>
-</label>
-<label class="container"><img src="compimage.png" height="20" width="160">
-  <input type="checkbox" id="myCheckComp" onclick="myFunctionChecksT()">
-  <span class="checkmark"></span>
-</label>
-<label class="container"><img src="transportationimage.png" height="20" width="130">
-  <input type="checkbox" id="myCheckTransportation" onclick="myFunctionChecksT()">
-  <span class="checkmark"></span>
-</label>
-</div>
-
-
 
 <div>
 
 
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1NSaDwx8hWmk35AUEUnOtJbuUmmSV1BQq" width="640" height="480" style="position:absolute; bottom: 5%"></iframe>
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1NSaDwx8hWmk35AUEUnOtJbuUmmSV1BQq" width="750" height="550" style="position:absolute; bottom: 5%; left: 5%;"></iframe>
 
 
 
  </div>
+
+   <p> To specify project types, select the
+     <img src="openps.png" alt="Expand Project Types" width="15%" height="4%">
+       button to the left of "Project Map"
+     </p>
+
+
 
 
 
