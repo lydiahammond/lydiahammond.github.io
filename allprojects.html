@@ -1,13 +1,82 @@
 
 
-<img src="skypatrickjanser.jpg" alt="Sky" width="100%" height="350" style="position:absolute; z-index: -100; top:0; left:0;">
-<img src="headerimage.png" alt="Carbon Commerce" width="520" height="100" style="position:absolute; z-index: -100;">
+<img src="bgsky.JPG" alt="Sky Background" width="100%" height="100%" style="position:fixed; z-index: -100; top:0; left:0;">
+<img src="skypatrickjanser.jpg" alt="Sky" width="100%" height="43%" style="position:fixed; z-index: 5; top:0; left:0;">
+<img src="headerimage.png" alt="Carbon Commerce" width="520" height="100" style="position:fixed; z-index: 10;">
 
 <!DOCTYPE html>
 <html style="overflow-x:hidden;">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
+<style>
+
+  #myTable {
+    position: relative;
+    top: 45%;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 17px;
+    z-index: 0;
+  }
+
+  #myTable th {
+    text-align: left;
+    padding: 20px;
+    white-space:wrap;
+  }
+
+  #myTable td {
+    text-align: left;
+    padding: 12px;
+  }
+
+  #myTable tr {
+    border-bottom: 1px solid #ddd;
+  }
+
+  #myTable tr.header {
+    background-color: #E8BE7F;
+    position: fixed;
+    top:42%;
+  }
+
+  #myTable tr.header:hover {
+    background-color: #E8BE7F;
+  }
+
+  #myTable tr:hover {
+    background-color: #CEE3F6;
+  }
+  table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+
+  }
+
+  th, td {
+    text-align: left;
+    padding: 20px;
+    width: 10%;
+  }
+
+  tr:nth-child(odd) {
+    background-color: rgba(240, 240, 240, 0.5);
+  }
+
+  tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  table td:last-child {
+      word-break: break-all;
+
+  }
+
+  </style>
+
 
 </head>
 
@@ -30,7 +99,7 @@
     </div>
   </div>
     <div class="dropdown">
-      <button class="dropbtn">All Projects
+      <button class="dropbtn" style="box-shadow:none;">All Projects
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
@@ -49,22 +118,24 @@
   </div>
   <div class="dropdown">
     <button class="dropbtn">Contact Me
-      <a href=main.html;></a>
+      <a href="contact.html"></a>
     </button>
   </div>
   </div>
 
 
-<h4>Last Updated:1/16/2021</h4>
+<h4>Last Updated:1/16/2021 CANT CLICK LINKS</h4>
 
 
 
+<div class="ptypes">
+
+<input type="text" id="myInputnames" onkeyup="myFunctionNames()" placeholder="Search by project name.." title="Type in a name" style="background-color:inherit; position: absolute; top: 60%;">
+<br><input type="text" id="myInputdevs" onkeyup="myFunctionDevs()" placeholder="Search by developer.." title="Type in a developer" style="background-color:inherit; position: absolute; top: 90%;">
 
 
-<input type="text" id="myInputnames" onkeyup="myFunctionNames()" placeholder="Search by project name.." title="Type in a name" style="background-color:inherit;">
-<br><input type="text" id="myInputdevs" onkeyup="myFunctionDevs()" placeholder="Search by developer.." title="Type in a developer" style="background-color:inherit;">
 
-<h3 style="position:relative;left:52%;bottom:22%; font-size:15px;">Project Types</h3>
+<h3 style="position:absolute; left:52%; top:50%; font-size:15px; font-variant:small-caps;">Project Types</h3>
 
 <div class="column">
 <label class="container">All
@@ -123,20 +194,18 @@
 
 
 <p>Project Total:</p>
+
+
 <p1 id="rows">1029</p1>
-
-
-<table class="table table-responsive table-hover">
-<table id="myTable" style="font-weight:bold; color:##595050">
+</div>
+<table id="myTable" style="width:100%;">
   <tr class="header">
-
-    <th style="width:20%">Project Name</th>
-    <th style="width:15%">Project Developer</th>
+    <th>Project Name</th>
+    <th>Project Developer</th>
     <th>Verifier</th>
     <th>Project Type</th>
-
     <th>Credits Registered</th>
-    <th>Additional Information     </th>
+    <th>Additional Information</th>
   </tr>
 
   <tr>	<td><a target="_blank" onmouseover="javascript:window.status='Click here to view information about the			18 Reserves Forest Carbon Project project.'; return true;" onmouseout="javascript:window.status=''; return true;" href="https://acr2.apx.com/mymodule/reg/prjView.asp?id1=586">18 Reserves Forest Carbon Project</a></td>		<td><a target="_blank" onmouseover="javascript:window.status='Click here to view information about the The Climate Trust account.'; return true;" onmouseout="javascript:window.status=''; return true;" href="https://acr2.apx.com/mymodule/reg/accview.asp?id1=247">The Climate Trust</a></td>	<td>	ACR	</td><td>	Forest Carbon		</td><td>		</td><td>	Registered</td>
