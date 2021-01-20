@@ -25,11 +25,14 @@
     text-align: left;
     padding: 20px;
     white-space:wrap;
+
   }
 
   #myTable td {
     text-align: left;
-    padding: 12px;
+    padding: 10px;
+
+
   }
 
   #myTable tr {
@@ -58,7 +61,7 @@
 
   th, td {
     text-align: left;
-    padding: 20px;
+    padding: 10px;
     width: 10%;
   }
 
@@ -75,6 +78,46 @@
 
   }
 
+
+    p {
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      border: 10px solid;
+      border-color: #DFC9C9;
+      border-radius: 20px;
+      padding: 1%;
+      padding-bottom: 4%;
+      text-align:center;
+      font-weight: bold;
+      font-size: 22px;
+      box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.2);
+      font-variant: small-caps;
+      background-color: inherit;
+    }
+
+    p1 {
+      position: absolute;
+      top: 70%;
+      right: 8%;
+      padding: 2%;
+      width: ;
+      text-align:center;
+      font-weight: bold;
+      font-size: 30px;
+      font-variant: small-caps;
+    }
+
+    .column {
+      position: relative;
+      float: left;
+      width: 8%;
+      padding: 10px;
+      left:42%;
+      top: 55%;
+
+    }
+
   </style>
 
 
@@ -82,45 +125,37 @@
 
 <body>
 
-  <div class="navbar">
 
-    <div class="dropdown">
-      <button class="dropbtn">Home
-        <a href=main.html;></a>
-      </button>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn">Our Service
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="aboutbuyers.html">For Buyers</a>
-        <a href="aboutsellers.html">For Sellers</a>
-    </div>
-  </div>
-    <div class="dropdown">
-      <button class="dropbtn" style="box-shadow:none;">All Projects
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="allprojects.html">List View</a>
-        <a href="map.html">Map View</a>
+    <div class="navbar">
+          <a class="dropbtn" href="main.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Our Service
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="aboutbuyers.html">For Buyers</a>
+          <a href="aboutsellers.html">For Sellers</a>
       </div>
     </div>
-    <div class="dropdown">
-      <button class="dropbtn">Marketplace
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="purchase.html">Purchase Carbon Credits</a>
-        <a href="sell.html">Sell Carbon Credits</a>
+      <div class="dropdown">
+        <button class="dropbtn" style="box-shadow:none; background-color: rgba(240, 240, 240, 0.3);">All Projects
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="allprojects.html">List View</a>
+          <a href="map.html">Map View</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Marketplace
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="purchase.html">Purchase Carbon Credits</a>
+          <a href="sell.html">Sell Carbon Credits</a>
+      </div>
     </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn">Contact Me
-      <a href="contact.html"></a>
-    </button>
-  </div>
+        <a class="dropbtn" href="contact.html">Contact Me</a>
   </div>
 
 
@@ -202,7 +237,7 @@
   <tr class="header">
     <th>Project Name</th>
     <th>Project Developer</th>
-    <th>Verifier</th>
+    <th style="width:5%">Verifier</th>
     <th>Project Type</th>
     <th>Credits Registered</th>
     <th>Additional Information</th>
