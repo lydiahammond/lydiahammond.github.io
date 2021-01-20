@@ -1,5 +1,5 @@
 <img src="bgsky.JPG" alt="Sky Background" width="100%" height="100%" style="position:fixed; z-index: -100; top:0; left:0;">
-<img src="skypatrickjanser.jpg" alt="Sky" width="100%" height="40%" style="position:fixed; z-index: 5; top:0; left:0;">
+<img src="skypatrickjanser.jpg" alt="Sky" width="100%" height="50%" style="position:fixed; z-index: 5; top:0; left:0;">
 <img src="headerimage.png" alt="Carbon Commerce" width="520" height="100" style="position:fixed; z-index: 10;">
 
 
@@ -15,7 +15,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 50%;
+    top: 59%;
     border-collapse: collapse;
     width: 100%;
     border: 1px solid #ddd;
@@ -26,7 +26,7 @@
 
   #myTable th {
     text-align: center;
-    padding: 20px;
+    padding: 16px;
 
     background-color: #E8BE7F;
 
@@ -34,8 +34,6 @@
 
   #myTable td {
     text-align: left;
-
-
 
   }
 
@@ -46,7 +44,8 @@
 
   #myTable tr.header {
     background-color: #E8BE7F;
-    top: 40%;
+    top: 48%;
+    position:fixed;
 
 
 
@@ -70,7 +69,7 @@
 
   td {
     text-align: left;
-    padding: 16px;
+    padding: 1%;
 
   }
 
@@ -100,17 +99,55 @@
 
   }
 
+
+  p {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    border: 10px solid;
+    border-color: #DFC9C9;
+    border-radius: 20px;
+    padding: 1%;
+    padding-bottom: 4%;
+    text-align:center;
+    font-weight: bold;
+    font-size: 22px;
+    box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.2);
+    font-variant: small-caps;
+    background-color: inherit;
+  }
+
+  p1 {
+    position: absolute;
+    top: 70%;
+    right: 8%;
+    padding: 2%;
+    width: ;
+    text-align:center;
+    font-weight: bold;
+    font-size: 30px;
+    font-variant: small-caps;
+  }
+
+  .column {
+    position: relative;
+    float: left;
+    width: 8%;
+    padding: 10px;
+    left:42%;
+    top: 70%;
+
+  }
+
+
   </style>
 
 </head>
 <body>
   <div class="navbar">
 
-    <div class="dropdown">
-      <button class="dropbtn">Home
-        <a href="main.html"></a>
-      </button>
-    </div>
+      <a href="main.html">Home</a>
+
     <div class="dropdown">
       <button class="dropbtn">Our Service
         <i class="fa fa-caret-down"></i>
@@ -130,7 +167,7 @@
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropbtn" style="box-shadow:none;">Marketplace
+      <button class="dropbtn" style="box-shadow:none; background-color: rgba(240, 240, 240, 0.3);">Marketplace
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
@@ -138,19 +175,16 @@
         <a href="sell.html">Sell Carbon Credits</a>
     </div>
   </div>
-  <div class="dropdown">
-    <button class="dropbtn">Contact Me
-      <a href="contact.html"></a>
-    </button>
+      <a href="contact.html">Contact Me</a>
   </div>
-  </div>
+
 
 
 <h3>Marketplace</h3>
 
 <div class="ptypes">
 
-<h3 style="position:absolute; left:30%; top:48%; font-size:15px; font-variant:small-caps;">Project Types</h3>
+<h3 style="position:absolute; left:30%; top:55%; font-size:15px; font-variant:small-caps;">Project Types</h3>
 
 <div class="column" style="left:10%;">
 <label class="container">All
@@ -225,11 +259,11 @@
 
     <th style="width:15%">Project Name</th>
     <th style="width:10%">Project Developer</th>
-    <th style="width:10%">Verifier</th>
+    <th style="width:5%">Verifier</th>
     <th style="width:10%">Project Type</th>
-    <th style="width:10%">Credits Available</th>
+    <th style="width:5%">Credits Available</th>
     <th style="width:10%">Price Per Credit</th>
-    <th style="width:10%">Additional Information</th>
+    <th style="width:20%">Additional Information</th>
     <th style="width:20%; padding:0; "> </th>
   </tr>
 
