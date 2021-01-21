@@ -1,6 +1,7 @@
+
 <img src="bgsky.JPG" alt="Sky Background" width="100%" height="100%" style="position:fixed; z-index: -100; top:0; left:0;">
-<img src="skypatrickjanser.jpg" alt="Sky" width="100%" height="50%" style="position:fixed; z-index: 5; top:0; left:0;">
-<img src="headerimage.png" alt="Carbon Commerce" width="520" height="100" style="position:fixed; z-index: 10;">
+<img src="skypatrickjanser.jpg" alt="Sky" width="100%" height="40%" style="position:fixed; z-index: 5; top:0; left:0;">
+<img src="headerimage.png" alt="Carbon Commerce" width="30%" height="10%" style="position:fixed; z-index: 10;">
 
 
 <!DOCTYPE html>
@@ -15,18 +16,18 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 59%;
+    top: 48%;
     border-collapse: collapse;
     width: 100%;
     border: 1px solid #ddd;
-    font-size: 17px;
+    font-size: 2vmin;
     z-index: 1;
 
   }
 
   #myTable th {
     text-align: center;
-    padding: 16px;
+    padding: 1%;
 
     background-color: #E8BE7F;
 
@@ -39,12 +40,13 @@
 
   #myTable tr {
     width: 100%;
+    font-size: 2.1vmin;
 
   }
 
   #myTable tr.header {
     background-color: #E8BE7F;
-    top: 48%;
+    top: 40%;
     position:fixed;
 
 
@@ -92,13 +94,18 @@
 
 
   table td:last-child {
-      margin:0;
-      padding-bottom:0;
 
-
+      padding:0;
 
   }
 
+  table td:nth-child(7) {
+      margin:0;
+      padding-right:0;
+      word-wrap: break-word;
+
+
+  }
 
   p {
     position: absolute;
@@ -106,12 +113,12 @@
     right: 5%;
     border: 10px solid;
     border-color: #DFC9C9;
-    border-radius: 20px;
-    padding: 1%;
-    padding-bottom: 4%;
+    border-radius: 5vmin;
+
+
     text-align:center;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 2vmin;
     box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.2);
     font-variant: small-caps;
     background-color: inherit;
@@ -121,23 +128,32 @@
     position: absolute;
     top: 70%;
     right: 8%;
-    padding: 2%;
+
     width: ;
     text-align:center;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 2vmin;
     font-variant: small-caps;
   }
 
   .column {
-    position: relative;
-    float: left;
-    width: 8%;
-    padding: 10px;
-    left:42%;
-    top: 70%;
+      position: relative;
+      float: left;
+      padding: 1vmin;
+      left:42%;
+      top: 55%;
+      margin:0.5%;
+      width: 10%;
 
-  }
+    }
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: black;
+      opacity: 0.5; /* Firefox */
+      font-size: 2vmin;
+      padding:1%;
+    }
+
 
 
   </style>
@@ -184,59 +200,67 @@
 
 <div class="ptypes">
 
-<h3 style="position:absolute; left:30%; top:55%; font-size:15px; font-variant:small-caps;">Project Types</h3>
+<h3 style="position:absolute; left:30%; top:40%; font-size:2vmin; font-variant:small-caps;">Project Types</h3>
 
 <div class="column" style="left:10%;">
 <label class="container">All
   <input type="checkbox" id="myCheckAllT" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+<br>
 <label class="container">Forest
   <input type="checkbox" id="myCheckForest" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+<br>
 <label class="container">Livestock
   <input type="checkbox" id="myCheckLivestock" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
 </div>
-<div class="column" style="width:12%; left:10%;">
+<div class="column" style="left:10%;">
 <label class="container">Agriculture
   <input type="checkbox" id="myCheckAgriculture" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-<label class="container">Ozone Depleting Substances
+<br>
+<label class="container">ODS
   <input type="checkbox" id="myCheckOzone" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+<br>
 <label class="container">Landfill
   <input type="checkbox" id="myCheckLandfill" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
 </div>
-<div class="column" style="width: 12%; left:10%;">
+<div class="column" style="left:10%;">
 <label class="container">Energy Industry
   <input type="checkbox" id="myCheckEnergy" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+<br>
 <label class="container">Fossil Fuel
   <input type="checkbox" id="myCheckFuel" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+<br>
 <label class="container">Mining
   <input type="checkbox" id="myCheckMine" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
 </div>
-<div class="column" style="width:12%; left:10%;">
+<div class="column" style="left:10%;">
 <label class="container">Industrial
   <input type="checkbox" id="myCheckIndustrial" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+<br>
 <label class="container">Compost/Digestion
   <input type="checkbox" id="myCheckComp" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+<br>
 <label class="container">Transportation
   <input type="checkbox" id="myCheckTransportation" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
@@ -244,7 +268,7 @@
 </div>
 
 
-<a href="sell.html"><button class="open-button" style="font-size:18px">List Your Credits</button></a>
+<a href="sell.html"><button class="open-button">List Your Credits</button></a>
 
 
 
@@ -264,7 +288,7 @@
     <th style="width:5%">Credits Available</th>
     <th style="width:10%">Price Per Credit</th>
     <th style="width:20%">Additional Information</th>
-    <th style="width:20%; padding:0; "> </th>
+    <th style="width:20%"> </th>
   </tr>
 
 
@@ -278,17 +302,20 @@
 </table>
 
 
-    <div id="myForm">
+    <div id="myForm" style="display:none;">
 
        <label for="name"><b>Your Name</b></label>
+       <br>
 
        <input type="text" placeholder="Enter Your Name" name="name" required>
 
        <br><label for="company"><b>Company Name</b></label>
+       <br>
 
        <input type="text" placeholder="Enter Company" name="company" required>
 
        <br><label for="email"><b>Return Email</b></label>
+       <br>
 
        <input type="text" placeholder="Enter Email" name="email" required>
 

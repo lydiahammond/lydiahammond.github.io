@@ -9,45 +9,53 @@ body {
 
 .navbar {
   overflow: hidden;
+  width: 100%;
   position: fixed;
-  margin-top:8.5%;
+  top: 12%;
   z-index:999;
   color: black;
   text-shadow: 0px 0px 10px white;
+  border:inherit;
 
 }
 
 .navbar a {
+  margin-top: 0.2%;
+  margin-right: 0.2%;
+  margin-left: 0.2%;
   float: left;
   color: black;
   text-align: center;
+  padding: 2vmin;
   text-decoration: none;
   position:relative;
   font-weight:bold;
   text-shadow: 0px 0px 10px white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  font-size: 2.5vmin;
 }
 
 .dropdown {
   float: left;
   overflow: hidden;
   z-index: 1000;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   text-shadow: 0px 0px 10px white;
 }
 
 .dropdown .dropbtn {
-  z-index: 9999;
-  font-size: 16px;
+  font-size: 2.5vmin;
   border: none;
   outline: none;
-  color: white;
-  padding: 13px 16px;
+  padding: 2vmin;
   background-color:inherit;
   color: black;
   font-weight: bold;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  text-shadow: 0px 0px 10px white;
   z-index: 9999;
 }
+
 
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: #7788C7;
@@ -58,29 +66,34 @@ body {
   display: none;
   position: fixed;
   background-color: inherit;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 9;
+  min-width: 30vmin;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 9999;
 }
 
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 12px 16px;
+  padding: 2vmin;
   text-decoration: none;
   display: block;
   text-align: left;
-  z-index:9;
+  z-index:9999;
+  font-size: 2vmin;
+  text-shadow: 0px 0px 10px white;
+
 }
 
 .dropdown-content a:hover {
   background-color: #ddd;
-  z-index:9;
+  z-index:9999;
+
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
-  z-index:9;
+  background-color: rgba(240, 240, 240, 0.5);
+  z-index:9999;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -93,36 +106,37 @@ body {
   color: black;
   width: 35%;
   padding-left: 5%;
-  font-size: 16px;
+  font-size: 2.5vmin;
   padding: 12px 20px 12px;
   border: inherit;
   box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.2);
   margin-left: 10px;
   margin-bottom: 12px;
+
 }
 
 #myInputdevs {
   color: black;
   width: 35%;
-  padding-left: 5%;
-  font-size: 16px;
-  padding: 12px 20px 12px;
+
+  font-size: 2vmin;
+  padding: 2vmin;
   border: inherit;
   box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.2);
-  margin-left: 10px;
-  margin-bottom: 12px;
+  margin-left: 1%;
+  margin-top: 1%;
 }
 
 #myInputnames {
   color: black;
   width: 35%;
-  padding-left: 5%;
-  font-size: 16px;
-  padding: 12px 20px 12px;
+  font-size: 2vmin;
+  padding: 2vmin;
   border: inherit;
   box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.2);
-  margin-left: 10px;
-  margin-bottom: 12px;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  margin-top: 1%;
 }
 
 
@@ -137,18 +151,17 @@ button {
   left: 0;
   display: inline-block;
   position: relative;
-  top: 30%;
-  padding-left: 30px;
+  top: 20%;
+  padding-left: 5vmin;
   margin-left: 1%;
   margin-top: 5%;
   margin-bottom: 5%;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 2vmin;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
 }
 
 
@@ -156,8 +169,6 @@ button {
   position: absolute;
   opacity: 0;
   cursor: pointer;
-  height: 0;
-  width: 0;
 }
 
 
@@ -165,10 +176,9 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  height: 15px;
-  width: 15px;
+  height: 2vmin;
+  width: 2vmin;
   background-color: inherit;
-
   box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
 }
 
@@ -200,46 +210,41 @@ button {
   float: left;
   width: 100%;
   height: 30%;
+  top: 8%;
 }
 
 
 
-.column {
-  position: relative;
-  float: left;
-  width: 8%;
-  padding: 10px;
-  left:42%;
-  top: 55%;
-
-}
 
 .open-button {
   background-color: inherit;
   color: black;
-  padding: 20px 5px;
+  padding: 2%;
+  width:20%;
   border: inherit;
   font-weight:bold;
+  font-size: 3vmin;
+  font-variant: small-caps;
   cursor: pointer;
   opacity: 0.8;
   position: absolute;
   top: 50%;
-  left: 82%;
-  width: 15%;
+  right: 10%;
+  text-shadow: 0px 0px 10px white;
   box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.2);
 }
 
 .btn {
   color: black;
   background-color: #E0ACF6;
-  padding: 15px;
+  padding: 2%;
   border: none;
   cursor: pointer;
-  width: 200px;
+  width:70%;
   margin-bottom:;
   margin-top: ;
   opacity: 0.8;
-  font-size: 16px;
+  font-size: 2vmin;
   display: block;
 }
 
@@ -249,17 +254,19 @@ button {
 
   color: #476b6b;
   cursor: pointer;
-  padding: 25px;
-  width: 100%;
-  height: 100%;
+  padding: 8%;
+  width:100%;
   border: none;
   text-align: center;
   outline: none;
-  font-size: 16px;
+  font-size: 2vmin;
+  margin-top:8%;
 }
 
 .active, .accordion:hover {
   background-color: #aeccc8;
+  width: 100%;
+
 }
 
 .panel {
@@ -274,39 +281,8 @@ button {
 }
 input {
   width:100%;
-  font-size:14px;
-  padding:5px;
+  font-size:2vmin;
+  padding:2%;
+  opacity: 0;
   margin-bottom:5%;
-}
-
-
-
-p {
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  border: 10px solid;
-  border-color: #DFC9C9;
-  border-radius: 20px;
-  padding: 1%;
-  padding-bottom: 4%;
-  background-color: white;
-  text-align:center;
-  font-weight: bold;
-  font-size: 22px;
-  box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.2);
-  font-variant: small-caps;
-  background-color: inherit;
-}
-
-p1 {
-  position: absolute;
-  top: 70%;
-  right: 8%;
-  padding: 2%;
-  width: ;
-  text-align:center;
-  font-weight: bold;
-  font-size: 30px;
-  font-variant: small-caps;
 }
