@@ -1,8 +1,6 @@
-
-
 <img src="bgsky.JPG" alt="Sky Background" width="100%" height="100%" style="position:fixed; z-index: -100; top:0; left:0;">
-<img src="skypatrickjanser.jpg" alt="Sky" width="100%" height="43%" style="position:fixed; z-index: 5; top:0; left:0;">
-<img src="headerimage.png" alt="Carbon Commerce" width="520" height="100" style="position:fixed; z-index: 10;">
+<img src="skypatrickjanser.jpg" alt="Sky" width="100%" height="38%" style="position:fixed; z-index: 5; top:0; left:0;">
+<img src="headerimage.png" alt="Carbon Commerce" width="30%" height="10%" style="position:fixed; z-index: 10;">
 
 <!DOCTYPE html>
 <html style="overflow-x:hidden;">
@@ -17,32 +15,41 @@
     border-collapse: collapse;
     width: 100%;
     border: 1px solid #ddd;
-    font-size: 17px;
+    font-size: 2vmin;
     z-index: 0;
   }
 
   #myTable th {
     text-align: left;
-    padding: 20px;
+    padding: 1%;
+    padding-left: 0;
     white-space:wrap;
+    width: 100%;
+    margin: 0;
 
   }
 
   #myTable td {
     text-align: left;
-    padding: 10px;
-
-
+    padding: 1%;
+    padding-right: 0;
   }
+
 
   #myTable tr {
     border-bottom: 1px solid #ddd;
+    padding: ;
+    font-size: 2.1vmin;
+
   }
 
   #myTable tr.header {
     background-color: #E8BE7F;
     position: fixed;
-    top:42%;
+    margin:0;
+    padding:0;
+    top:38%;
+    width: 100%;
   }
 
   #myTable tr.header:hover {
@@ -52,17 +59,15 @@
   #myTable tr:hover {
     background-color: #CEE3F6;
   }
+
+
+
+
   table {
     border-spacing: 0;
     width: 100%;
     border: 1px solid #ddd;
 
-  }
-
-  th, td {
-    text-align: left;
-    padding: 10px;
-    width: 10%;
   }
 
   tr:nth-child(odd) {
@@ -75,48 +80,85 @@
 
   table td:last-child {
       word-break: break-all;
+      width: 22%;
+  }
 
+  table td:first-child {
+      word-break: break-all;
+      width: 25%;
+  }
+
+  table td:nth-child(4) {
+      word-break: break-all;
+      width: 20%;
+  }
+
+  table td:nth-child(3) {
+      word-break: break-all;
+      width: 5%;
+  }
+
+  table td:nth-child(5) {
+      word-break: break-all;
+      width: 8%;
+  }
+
+  table td:nth-child(2) {
+      word-break: break-all;
+      width: 20%;
   }
 
 
-    p {
-      position: absolute;
-      top: 50%;
-      right: 5%;
-      border: 10px solid;
-      border-color: #DFC9C9;
-      border-radius: 20px;
-      padding: 1%;
-      padding-bottom: 4%;
+
+
+
+  p {
       text-align:center;
       font-weight: bold;
-      font-size: 22px;
-      box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.2);
+      font-size: 2vmin;
       font-variant: small-caps;
       background-color: inherit;
     }
 
-    p1 {
+  p1 {
       position: absolute;
-      top: 70%;
-      right: 8%;
-      padding: 2%;
-      width: ;
+      padding: ;
+      top: 55%;
+      left: 30%;
       text-align:center;
       font-weight: bold;
-      font-size: 30px;
+      font-size: 3vmin;
       font-variant: small-caps;
     }
 
-    .column {
+
+  .column {
       position: relative;
       float: left;
-      width: 8%;
-      padding: 10px;
+      width: 10%;
+      padding: 0.5vmin;
       left:42%;
-      top: 55%;
+      top: 60%;
 
     }
+
+  .total {
+      position: fixed;
+      float: left;
+      height: 10%;
+      width: 9%;
+      top: 20%;
+      right: 2%;
+      box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.2);
+      background-color: inherit;
+      border: 1vmin solid;
+      border-color: rgba(223, 201, 201, 0.3);
+      border-radius: 2vmin;
+      box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+
 
   </style>
 
@@ -159,8 +201,6 @@
   </div>
 
 
-<h4>Last Updated:1/16/2021 CANT CLICK LINKS</h4>
-
 
 
 <div class="ptypes">
@@ -170,77 +210,87 @@
 
 
 
-<h3 style="position:absolute; left:52%; top:50%; font-size:15px; font-variant:small-caps;">Project Types</h3>
+<h3 style="position:absolute; left:60%; top:55%; font-size:2vmin; font-variant:small-caps;">Project Types</h3>
 
-<div class="column">
+<div class="column" style="left:40%;">
 <label class="container">All
   <input type="checkbox" id="myCheckAllT" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+<br>
 <label class="container">Forest
   <input type="checkbox" id="myCheckForest" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+<br>
 <label class="container">Livestock
   <input type="checkbox" id="myCheckLivestock" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+</div>
+<div class="column" style="left:40%;">
 <label class="container">Agriculture
   <input type="checkbox" id="myCheckAgriculture" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-</div>
-<div class="column"; style="width:12%";>
-<label class="container">Ozone Depleting Substances
+<br>
+<label class="container">ODS
   <input type="checkbox" id="myCheckOzone" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+<br>
 <label class="container">Landfill
   <input type="checkbox" id="myCheckLandfill" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+</div>
+<div class="column" style="left:40%;">
 <label class="container">Energy Industry
   <input type="checkbox" id="myCheckEnergy" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+<br>
 <label class="container">Fossil Fuel
   <input type="checkbox" id="myCheckFuel" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-</div>
-<div class="column">
+<br>
 <label class="container">Mining
   <input type="checkbox" id="myCheckMine" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+</div>
+<div class="column" style="left:40%;">
 <label class="container">Industrial
   <input type="checkbox" id="myCheckIndustrial" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+<br>
 <label class="container">Compost/Digestion
   <input type="checkbox" id="myCheckComp" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
+<br>
 <label class="container">Transportation
   <input type="checkbox" id="myCheckTransportation" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
 </div>
+</div>
 
-
+<div class=total>
 <p>Project Total:</p>
-
-
 <p1 id="rows">1029</p1>
 </div>
+
 <table id="myTable" style="width:100%;">
   <tr class="header">
-    <th>Project Name</th>
-    <th>Project Developer</th>
-    <th style="width:5%">Verifier</th>
-    <th>Project Type</th>
-    <th>Credits Registered</th>
-    <th>Additional Information</th>
+    <th style="width:25%;">Project Name</th>
+    <th style="width:20%;">Project Developer</th>
+    <th style="width:5%;">Verifier</th>
+    <th style="width:20%;">Project Type</th>
+    <th style="width:8%;">Credits Registered</th>
+    <th style="width:22%;">Additional Information</th>
   </tr>
 
   <tr>	<td><a target="_blank" onmouseover="javascript:window.status='Click here to view information about the			18 Reserves Forest Carbon Project project.'; return true;" onmouseout="javascript:window.status=''; return true;" href="https://acr2.apx.com/mymodule/reg/prjView.asp?id1=586">18 Reserves Forest Carbon Project</a></td>		<td><a target="_blank" onmouseover="javascript:window.status='Click here to view information about the The Climate Trust account.'; return true;" onmouseout="javascript:window.status=''; return true;" href="https://acr2.apx.com/mymodule/reg/accview.asp?id1=247">The Climate Trust</a></td>	<td>	ACR	</td><td>	Forest Carbon		</td><td>		</td><td>	Registered</td>
