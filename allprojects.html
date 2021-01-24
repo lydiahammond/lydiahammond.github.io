@@ -1,5 +1,5 @@
 <img src="bgsky.JPG" alt="Sky Background" width="100%" height="100%" style="position:fixed; z-index: -100; top:0; left:0;">
-<img src="skypatrickjanser.jpg" alt="Sky" width="100%" height="38%" style="position:fixed; z-index: 5; top:0; left:0;">
+<img src="skypatrickjanser.jpg" alt="Sky" width="100%" height="44%" style="position:fixed; z-index: 5; top:0; left:0;">
 <img src="headerimage.png" alt="Carbon Commerce" width="30%" height="10%" style="position:fixed; z-index: 10;">
 
 <!DOCTYPE html>
@@ -11,12 +11,12 @@
 
   #myTable {
     position: relative;
-    top: 45%;
+    top: 43%;
     border-collapse: collapse;
     width: 100%;
     border: 1px solid #ddd;
     font-size: 2vmin;
-    z-index: 0;
+
   }
 
   #myTable th {
@@ -26,6 +26,7 @@
     white-space:wrap;
     width: 100%;
     margin: 0;
+    z-index: 9999;
 
   }
 
@@ -44,16 +45,17 @@
   }
 
   #myTable tr.header {
-    background-color: #E8BE7F;
+    background-color: rgba(255,228,225,0.1);
     position: fixed;
     margin:0;
     padding:0;
-    top:38%;
+    top:36%;
     width: 100%;
+    z-index: 9999;
   }
 
   #myTable tr.header:hover {
-    background-color: #E8BE7F;
+    background-color: rgba(255,228,225,0.1);
   }
 
   #myTable tr:hover {
@@ -133,12 +135,13 @@
 
 
   .column {
-      position: relative;
-      float: left;
-      width: 10%;
-      padding: 0.5vmin;
-      left:42%;
-      top: 48%;
+    position: relative;
+    float: left;
+    padding: 1vmin;
+    left:8%;
+    top:0%;
+    margin:0.5%;
+    width: 10%;
 
     }
 
@@ -147,14 +150,11 @@
       float: left;
       height: 10%;
       width: 9%;
-      top: 20%;
+      top: 23%;
       right: 2%;
-      box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.2);
+      box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
       background-color: inherit;
-      border: 1vmin solid;
-      border-color: rgba(223, 201, 201, 0.3);
       border-radius: 2vmin;
-      box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.2);
       z-index: 999;
     }
 
@@ -205,14 +205,14 @@
 
 <div class="ptypes">
 
-<input type="text" id="myInputnames" onkeyup="myFunctionNames()" placeholder="Search by project name.." title="Type in a name" style="background-color:inherit; position: absolute; top: 43%;">
-<br><input type="text" id="myInputdevs" onkeyup="myFunctionDevs()" placeholder="Search by developer.." title="Type in a developer" style="background-color:inherit; position: absolute; top: 70%; left: 0%;">
+<input type="text" id="myInputnames" onkeyup="myFunctionNames()" placeholder="Search by project name.." title="Type in a name" style="background-color:inherit; top: 7%; left: 60%;">
+<br><input type="text" id="myInputdevs" onkeyup="myFunctionDevs()" placeholder="Search by developer.." title="Type in a developer" style="background-color:inherit; position: absolute; top: 40%; left: 60%;">
 
 
 
-<h3 style="position:absolute; left:60%; top:38%; font-size:2vmin; font-variant:small-caps;">Project Types</h3>
+<h3 style="position:absolute; left:1%; top:15%; font-size:2.5vmin; width:5%; font-variant:small-caps;">Project Types</h3>
 
-<div class="column" style="left:40%;">
+<div class="column">
 <label class="container">All
   <input type="checkbox" id="myCheckAllT" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
@@ -228,7 +228,7 @@
   <span class="checkmark"></span>
 </label>
 </div>
-<div class="column" style="left:40%;">
+<div class="column">
 <label class="container">Agriculture
   <input type="checkbox" id="myCheckAgriculture" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
@@ -244,7 +244,7 @@
   <span class="checkmark"></span>
 </label>
 </div>
-<div class="column" style="left:40%;">
+<div class="column">
 <label class="container">Energy Industry
   <input type="checkbox" id="myCheckEnergy" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
@@ -260,7 +260,7 @@
   <span class="checkmark"></span>
 </label>
 </div>
-<div class="column" style="left:40%;">
+<div class="column">
 <label class="container">Industrial
   <input type="checkbox" id="myCheckIndustrial" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
