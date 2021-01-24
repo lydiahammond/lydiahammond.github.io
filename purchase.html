@@ -1,7 +1,9 @@
 
 <img src="bgsky.JPG" alt="Sky Background" width="100%" height="100%" style="position:fixed; z-index: -100; top:0; left:0;">
-<img src="skypatrickjanser.jpg" alt="Sky" width="100%" height="40%" style="position:fixed; z-index: 5; top:0; left:0;">
+<img src="skypatrickjanser.jpg" alt="Sky" width="100%" height="45%" style="position:fixed; z-index: 5; top:0; left:0;">
 <img src="headerimage.png" alt="Carbon Commerce" width="30%" height="10%" style="position:fixed; z-index: 10;">
+<img src="th.png" alt="Header" width="100%" height="7.5%" style="position:fixed; z-index: 10; top:38%; left:0; opacity: 0.8;">
+
 
 
 <!DOCTYPE html>
@@ -16,25 +18,31 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 48%;
+    top: 35%;
     border-collapse: collapse;
     width: 100%;
-    border: 1px solid #ddd;
+    border: 10px solid rgba(240, 240, 240, 0.2);
     font-size: 2vmin;
     z-index: 1;
 
   }
 
-  #myTable th {
-    text-align: center;
-    padding: 1%;
 
-    background-color: #E8BE7F;
+  #myTable th {
+    opacity:0;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: left;
+    background-color: rgba(255,228,225,0.1);
+    position: relative;
+    word-break: normal;
 
   }
 
   #myTable td {
     text-align: left;
+    padding: 0%;
+
 
   }
 
@@ -45,12 +53,12 @@
   }
 
   #myTable tr.header {
-    background-color: #E8BE7F;
+
+    opacity:0;
+    background-color: rgba(255,228,225,0.3);
     top: 40%;
-    position:fixed;
-
-
-
+    position: relative;
+    z-index: 9999;
   }
 
   #myTable tr:hover {
@@ -58,22 +66,10 @@
   }
 
   table {
-
     width: 100%;
     border: none;
   }
 
-  th {
-    text-align: left;
-    padding: 16px;
-
-  }
-
-  td {
-    text-align: left;
-    padding: 1%;
-
-  }
 
 
   tr:nth-child(odd) {
@@ -84,6 +80,7 @@
     background-color: rgba(255, 255, 255, 0.5);
   }
 
+
   table td:first-child {
       margin:0;
       padding-bottom:0;
@@ -93,19 +90,29 @@
 
 
 
-  table td:last-child {
+input {
+    max-width: 100%;
+    padding: 3%;
+    margin: 10px 0 20px 0;
+    border: none;
+    width: 90%;
+    background-color: white;
+    color: black;
+    opacity: 0.5;
+    font-size: 15px;
+    box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.2);
+  }
 
-      padding:0;
+  #myForm {
+    position: absolute;
+    border-collapse: collapse;
+    color: green;
+    width: 100%;
+    font-size: 2vmin;
+    z-index: 1;
 
   }
 
-  table td:nth-child(7) {
-      margin:0;
-      padding-right:0;
-      word-wrap: break-word;
-
-
-  }
 
   p {
     position: absolute;
@@ -141,18 +148,18 @@
       float: left;
       padding: 1vmin;
       left:42%;
-      top: 55%;
+      top:10%;
       margin:0.5%;
       width: 10%;
 
     }
 
-    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-      color: black;
-      opacity: 0.5; /* Firefox */
-      font-size: 2vmin;
-      padding:1%;
+  label.offer {
+      font-size: 1.7vmin;
+      padding: 0;
+      margin: 0;
     }
+
 
 
 
@@ -200,7 +207,7 @@
 
 <div class="ptypes">
 
-<h3 style="position:absolute; left:30%; top:40%; font-size:2vmin; font-variant:small-caps;">Project Types</h3>
+<h3 style="position:absolute; left:3%; top:20%; font-size:2.5vmin; width:5%; font-variant:small-caps;">Project Types</h3>
 
 <div class="column" style="left:10%;">
 <label class="container">All
@@ -281,68 +288,333 @@
 
   <tr class="header">
 
-    <th style="width:15%">Project Name</th>
-    <th style="width:10%">Project Developer</th>
-    <th style="width:5%">Verifier</th>
-    <th style="width:10%">Project Type</th>
-    <th style="width:5%">Credits Available</th>
-    <th style="width:10%">Price Per Credit</th>
-    <th style="width:20%">Additional Information</th>
-    <th style="width:20%"> </th>
+    <th>Project Name</th>
+    <th>Developer</th>
+    <th>Verifier</th>
+    <th>Type</th>
+    <th># Credits</th>
+    <th>$/Credit</th>
+    <th>Additional Info</th>
+    <th width="20%"> </th>
   </tr>
 
 
-  <tr><td>	Example Project 1	</td><td>	Ex Dev 1	</td><td>	CAR	</td><td>	Forest	</td><td>	10000	</td><td>	20.5	</td><td>	additional info example 1		</td><td>	<form action="mailto:lydiah123@gmail.com" enctype="text/plain" method="post"><button class="accordion"><strong>Make an Offer</strong></button><div class="panel"></div></form></td></tr>
-  <tr><td>	Example Project 2	</td><td>	Ex Dev 2	</td><td>	ACR	</td><td>	Ozone	</td><td>	200	</td><td>	30.25	</td><td>	additional info example 2		</td><td>	<form action="mailto:lydiah123@gmail.com" enctype="text/plain" method="post"><button class="accordion"><strong>Make an Offer</strong></button><div class="panel"></div></form></td></tr>
-  <tr><td>	Example Project 3	</td><td>	Ex Dev 3	</td><td>	Verra	</td><td>	Indusrtrial	</td><td>	3350	</td><td>	19.8	</td><td>	additional info example 3		</td><td>	<form action="mailto:lydiah123@gmail.com" enctype="text/plain" method="post"><button class="accordion"><strong>Make an Offer</strong></button><div class="panel"></div></form></td></tr>
-  <tr><td>	Example Project 4	</td><td>	Ex Dev 4	</td><td>	CAR	</td><td>	Agriculture	</td><td>	7	</td><td>	32.81	</td><td>	additional info example 4		</td><td>	<form action="mailto:lydiah123@gmail.com" enctype="text/plain" method="post"><button class="accordion"><strong>Make an Offer</strong></button><div class="panel"></div></form></td></tr>
-  <tr><td>	Example Project 5	</td><td>	Ex Dev 5	</td><td>	Verra	</td><td>	Mine	</td><td>	999	</td><td>	12.93	</td><td>	additional info example 5		</td><td>	<form action="mailto:lydiah123@gmail.com" enctype="text/plain" method="post"><button class="accordion"><strong>Make an Offer</strong></button><div class="panel"></div></form></td></tr>
+  <tr><td>	Example Project 1	</td><td>	Ex Dev 1	</td><td>	CAR	</td><td>	Forest	</td><td>	10000	</td><td>	20.5	</td><td>	additional info example 1</td><td>	<form action="mailto:lydiah123@gmail.com" enctype="text/plain" method="post"><button class="accordiony"><strong>Make an Offer</strong></button><div class="panel"></div></form></td></tr>
+  <tr><td>	Example Project 2	</td><td>	Ex Dev 2	</td><td>	ACR	</td><td>	Ozone	</td><td>	200	</td><td>	30.25	</td><td>	additional info example 2</td><td>	<form action="mailto:lydiah123@gmail.com" enctype="text/plain" method="post"><button class="accordionn"><strong>Purchase Credits</strong></button><div class="panel"></div></form></td></tr>
+  <tr><td>	Example Project 3	</td><td>	Ex Dev 3	</td><td>	Verra	</td><td>	Industrial	</td><td>	3350	</td><td>	19.8	</td><td>	additional info example 3</td><td>	<form action="mailto:lydiah123@gmail.com" enctype="text/plain" method="post"><button class="accordiony"><strong>Make an Offer</strong></button><div class="panel"></div></form></td></tr>
+  <tr><td>	Example Project 4	</td><td>	Ex Dev 4	</td><td>	CAR	</td><td>	Agriculture	</td><td>	7	</td><td>	32.81	</td><td>	additional info example 4</td><td>	<form action="mailto:lydiah123@gmail.com" enctype="text/plain" method="post"><button class="accordionn"><strong>Purchase Credits</strong></button><div class="panel"></div></form></td></tr>
+  <tr><td>	Example Project 5	</td><td>	Ex Dev 5	</td><td>	Verra	</td><td>	Mine	</td><td>	999	</td><td>	12.93	</td><td>	additional info example 5</td><td>	<form action="mailto:lydiah123@gmail.com" enctype="text/plain" method="post"><button class="accordionn"><strong>Purchase Credits</strong></button><div class="panel"></div></form></td></tr>
 
 
 </table>
 
 
-    <div id="myForm" style="display:none;">
+    <div id="myFormy" style="display:none;">
 
-       <label for="name"><b>Your Name</b></label>
-       <br>
+       <label for="name" class="offer"><b>Your Name</b></label>
+
 
        <input type="text" placeholder="Enter Your Name" name="name" required>
 
-       <br><label for="company"><b>Company Name</b></label>
-       <br>
+       <br><label for="company" class="offer"><b>Company Name</b></label>
+
 
        <input type="text" placeholder="Enter Company" name="company" required>
 
-       <br><label for="email"><b>Return Email</b></label>
-       <br>
+       <br><label for="email" class="offer"><b>Return Email</b></label>
+
 
        <input type="text" placeholder="Enter Email" name="email" required>
+
+       <br><label for="credits" class="offer"><b>Number of Credits Desired</b></label>
+
+
+       <input type="text" placeholder="Enter Number of Credits" name="credits" required>
+
+       <br><label for="price" class="offer"><b>Proposed Price Per Credit</b></label>
+
+
+       <input type="text" placeholder="Enter Price Proposal" name="price" required>
+
 
        <br><button type="submit" class="btn"><b>Submit Offer</b></button>
 
      </div>
 
+     <div id="myFormn" style="display:none;">
+
+        <label for="name" class="offer"><b>Your Name</b></label>
+
+
+        <input type="text" placeholder="Enter Your Name" name="name" required>
+
+        <br><label for="company" class="offer"><b>Company Name</b></label>
+
+
+        <input type="text" placeholder="Enter Company" name="company" required>
+
+        <br><label for="email" class="offer"><b>Return Email</b></label>
+
+
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+
+        <br><button type="submit" class="btn"><b>Proceed to Checkout</b></button>
+
+      </div>
 
 
    <script>
-   var acc = document.getElementsByClassName("accordion");
-   var i;
-
-   for (i = 0; i < acc.length; i++) {
-     acc[i].addEventListener("click", function() {
+   var accy = document.getElementsByClassName("accordiony");
+   var y;
+   for (y = 0; y < accy.length; y++) {
+     accy[y].addEventListener("click", function() {
        this.classList.toggle("active");
        var panel = this.nextElementSibling;
-       panel.innerHTML = document.getElementById("myForm").innerHTML;
+
+       panel.innerHTML = document.getElementById("myFormy").innerHTML;
        if (panel.style.display == "block") {
          panel.style.display = "none";
+         panel.previousElementSibling.innerText = "Make an Offer";
        } else {
-      /*   panel.innerHTML = document.getElementById("myForm").innerHTML; */
          panel.style.display = "block";
+         panel.previousElementSibling.innerText = "Cancel Offer";
        }
      });
    }
+
+   var accn = document.getElementsByClassName("accordionn");
+   var n;
+   for (n = 0; n < accn.length; n++) {
+     accn[n].addEventListener("click", function() {
+       this.classList.toggle("active");
+       var panel = this.nextElementSibling;
+       panel.previousElementSibling.innerText = "Purchase Credits";
+       panel.innerHTML = document.getElementById("myFormn").innerHTML;
+       if (panel.style.display == "block") {
+         panel.style.display = "none";
+
+       } else {
+         panel.style.display = "block";
+         panel.previousElementSibling.innerText = "Cancel";
+       }
+     });
+   }
+
+
+   function myFunctionChecksT() {
+     var checks, forest, ozone, landfill, agriculture, energy, fuel, mine, industrial, comp, transportation, table, tr, td, i, txtValue, n, checkn, count, all;
+     checks = [ ];
+
+
+
+     forest = document.getElementById("myCheckForest");
+     ozone = document.getElementById("myCheckOzone");
+     landfill = document.getElementById("myCheckLandfill");
+     livestock = document.getElementById("myCheckLivestock");
+     agriculture = document.getElementById("myCheckAgriculture");
+     energy = document.getElementById("myCheckEnergy");
+     fuel = document.getElementById("myCheckFuel");
+     mine = document.getElementById("myCheckMine");
+     industrial = document.getElementById("myCheckIndustrial");
+     comp = document.getElementById("myCheckComp");
+     transportation = document.getElementById("myCheckTransportation");
+     all = document.getElementById("myCheckAllT");
+
+     if (all.checked == true){
+       forest.checked = true;
+       ozone.checked = true;
+       landfill.checked = true;
+       livestock.checked = true;
+       agriculture.checked = true;
+       energy.checked = true;
+       fuel.checked = true;
+       mine.checked = true;
+       industrial.checked = true;
+       comp.checked = true;
+       transportation.checked = true;
+     }
+
+
+     if (forest.checked == true){
+       checks.push("FOREST");
+     }
+     if (forest.checked == false){
+       while (checks.indexOf("FOREST") > -1) {
+         checks = checks.splice(index, 1);
+       }
+
+     }
+
+
+     if (ozone.checked == true){
+       checks.push("OZONE");
+     }
+     if (ozone.checked == false){
+       index = checks.indexOf("OZONE");
+       if (index > -1) {
+         checks = checks.splice(index, 1);
+       }
+     }
+
+
+     if (landfill.checked == true){
+       checks.push("LANDFILL");
+     }
+     if (landfill.checked == false){
+       index = checks.indexOf("LANDFILL");
+       if (index > -1) {
+         checks = checks.splice(index, 1);
+       }
+     }
+
+
+
+     if (livestock.checked == true){
+       checks.push("LIVESTOCK");
+     }
+     if (livestock.checked == false){
+       index = checks.indexOf("LIVESTOCK");
+       if (index > -1) {
+         checks = checks.splice(index, 1);
+       }
+     }
+
+
+
+     if (agriculture.checked == true){
+       checks.push("AGRICULTURE");
+     }
+     if (agriculture.checked == false){
+       index = checks.indexOf("AGRICULTURE");
+       if (index > -1) {
+         checks = checks.splice(index, 1);
+       }
+     }
+
+     if (energy.checked == true){
+       checks.push("ENERGY");
+     }
+     if (energy.checked == false){
+       index = checks.indexOf("ENERGY");
+       if (index > -1) {
+         checks = checks.splice(index, 1);
+       }
+     }
+
+     if (fuel.checked == true){
+       checks.push("FUEL");
+     }
+     if (fuel.checked == false){
+       index = checks.indexOf("FUEL");
+       if (index > -1) {
+         checks = checks.splice(index, 1);
+       }
+     }
+
+     if (mine.checked == true){
+       checks.push("MINE");
+     }
+     if (mine.checked == false){
+       index = checks.indexOf("MINE");
+       if (index > -1) {
+         checks = checks.splice(index, 1);
+       }
+     }
+
+     if (industrial.checked == true){
+       checks.push("INDUSTRIAL");
+     }
+     if (industrial.checked == false){
+       index = checks.indexOf("INDUSTRIAL");
+       if (index > -1) {
+         checks = checks.splice(index, 1);
+       }
+     }
+
+     if (comp.checked == true){
+       checks.push("COMP");
+       checks.push("DIGEST");
+     }
+     if (comp.checked == false){
+       index = checks.indexOf("COMP");
+       if (index > -1) {
+         checks = checks.splice(index, 1);
+       }
+       index = checks.indexOf("DIGEST");
+       if (index > -1) {
+         checks = checks.splice(index, 1);
+       }
+     }
+
+     if (transportation.checked == true){
+       checks.push("TRANSPORTATION");
+     }
+     if (transportation.checked == false){
+       index = checks.indexOf("TRANSPORTATION");
+       if (index > -1) {
+         checks = checks.splice(index, 1);
+       }
+     }
+
+
+     if (checks.length > 0){
+       var totalrows=0;
+       var table = document.getElementById("myTable");
+       var tr = table.getElementsByTagName("tr");
+
+
+
+         for (i = 0; i < tr.length; i++) {
+           var count = 0;
+           var td = tr[i].getElementsByTagName("td")[3];
+
+           if (td) {
+             for (n = 0; n < checks.length; n++) {
+               var checkn = checks[n];
+               var txtValue = td.textContent || td.innerText;
+
+
+               if (txtValue.toUpperCase().indexOf(checkn) > -1) {
+                 tr[i].style.display = "";
+                 count++;
+                 totalrows++;
+                 break;
+
+               }
+             }
+             if (count == 0) {
+               tr[i].style.display = "none";
+             }
+
+           }
+         }
+
+
+       }
+
+
+
+       else {
+         table = document.getElementById("myTable");
+         tr = table.getElementsByTagName("tr");
+         for (i = 0; i < tr.length; i++) {
+           tr[i].style.display = "";
+
+         }
+       }
+
+       document.getElementById("rows").innerHTML = total(totalrows);
+
+   }
+
+   function total(totalrows) {
+     return totalrows;
+   }
+
+
    </script>
+
 
 
 </body>
