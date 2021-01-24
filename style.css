@@ -98,6 +98,7 @@ body {
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: black;
+  font-size: 1.8vmin;
   opacity: 0.5; /* Firefox */
 }
 
@@ -109,7 +110,7 @@ body {
   font-size: 2.5vmin;
   padding: 12px 20px 12px;
   border: inherit;
-  box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
   margin-left: 10px;
   margin-bottom: 12px;
 
@@ -117,23 +118,28 @@ body {
 
 #myInputdevs {
   color: black;
-  width: 35%;
-
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 25%;
   font-size: 2vmin;
-  padding: 2vmin;
+  padding: 1.5vmin;
   border: inherit;
-  box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
   margin-left: 1%;
   margin-top: 1%;
 }
 
 #myInputnames {
   color: black;
-  width: 35%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 25%;
   font-size: 2vmin;
-  padding: 2vmin;
+  padding: 1.5vmin;
   border: inherit;
-  box-shadow: 0px 0px 8px 5px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
   margin-left: 1%;
   margin-bottom: 1%;
   margin-top: 1%;
@@ -148,13 +154,13 @@ button {
 
 
 .container {
-  left: 0;
+  left: 0%;
   display: inline-block;
   position: relative;
-  top: 20%;
+  top: 0%;
   padding-left: 5vmin;
   margin-left: 1%;
-  margin-top: 5%;
+  margin-top: 1%;
   margin-bottom: 5%;
   cursor: pointer;
   font-size: 2vmin;
@@ -205,12 +211,14 @@ button {
 }
 
 .ptypes {
+  background-color: rgba(255,228,225, 0.1);
   position: fixed;
   z-index: 7;
   float: left;
+
   width: 100%;
-  height: 30%;
-  top: 8%;
+  height: 20%;
+  top: 20%;
 }
 
 
@@ -223,36 +231,41 @@ button {
   width:20%;
   border: inherit;
   font-weight:bold;
-  font-size: 3vmin;
+  font-size: 2.5vmin;
   font-variant: small-caps;
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.6;
   position: absolute;
-  top: 50%;
-  right: 10%;
+  top: 30%;
+  right: 5%;
   text-shadow: 0px 0px 10px white;
   box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.2);
 }
 
 .btn {
   color: black;
-  background-color: #E0ACF6;
-  padding: 2%;
+  background-color: white;
+  padding: 5%;
   border: none;
   cursor: pointer;
-  width:70%;
   margin-bottom:;
   margin-top: ;
-  opacity: 0.8;
+  opacity: 0.6;
   font-size: 2vmin;
   display: block;
+  font-variant: small-caps;
+}
+
+.btn:hover {
+  opacity: 0.8;
 }
 
 
-.accordion {
-  background-color: #c6ecd9;
-
-  color: #476b6b;
+.accordiony {
+  background-color: #608000;
+  font-weight: bold;
+  opacity: 0.6;
+  color: black;
   cursor: pointer;
   padding: 8%;
   width:100%;
@@ -261,19 +274,56 @@ button {
   outline: none;
   font-size: 2vmin;
   margin-top:8%;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+  font-variant: small-caps;
+  text-shadow: 0px 0px 2px white;
 }
 
-.active, .accordion:hover {
-  background-color: #aeccc8;
-  width: 100%;
 
+.accordionn {
+  background-color: #608000;
+  font-weight: bold;
+  color: black;
+  opacity: 0.6;
+  cursor: pointer;
+  padding: 8%;
+  width:100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 2vmin;
+  margin-top:8%;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+  font-variant: small-caps;
+  text-shadow: 0px 0px 2px white;
+}
+
+.active {
+  color: black;
+  font-weight: bold;
+  background-color: rgba(128, 0, 0, 0.6);
+
+}
+
+
+.accordiony:hover, .accordionn:hover {
+  background-color: #608000;
+  opacity: 0.8;
+  font-weight: bold;
+}
+.active:hover {
+  background-color: rgba(128, 0, 0, 0.8);
 }
 
 .panel {
   padding: 5%;
+  position:relative;
+  max-height: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
   display: none;
-  width: 100%;
-
+  max-width: 100%;
+  background-color: inherit;
   overflow: hidden;
 }
 
