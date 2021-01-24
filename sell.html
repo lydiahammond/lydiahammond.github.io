@@ -1,5 +1,4 @@
-<img src="bgsky.JPG" alt="Sky Background" width="100%" height="100%" style="position:fixed; z-index: -100; top:0; left:0;">
-<img src="skypatrickjanser.jpg" alt="Sky" width="100%" height="20%" style="position:fixed; z-index: 5; top:0; left:0;">
+<img src="skypatrickjanser.jpg" alt="Sky" width="100%" height="19.5%" style="position:fixed; z-index: 5; top:0; left:0;">
 <img src="headerimage.png" alt="Carbon Commerce" width="30%" height="10%" style="position:fixed; z-index: 10;">
 
 
@@ -10,40 +9,108 @@
 <link rel="stylesheet" href="style.css">
 <style>
 
+
   p {
     z-index: 9999;
     font-size: 1.8vmin;
     left: 0%;
-    line-height: 100%;
     padding: 1%;
     position: relative;
-    box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.2);
-    border-radius: 2vmin;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+    border-radius: 1vmin;
     text-align:center;
   }
 
 form {
-  top: 20%;
+  text-shadow: 0px 0px 10px white;
+}
 
+
+.container {
+  left: 0%;
+  display: inline-block;
+  position: relative;
+  top: 0%;
+  padding-left: 5vmin;
+  margin-left: 1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+
+  cursor: pointer;
+  font-size: 2vmin;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2vmin;
+  width: 2vmin;
+  background-color: inherit;
+  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+}
+
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+
+.container input:checked ~ .checkmark {
+  background-color: gray;
+
+}
+
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display:none;
+  content: "\2714";
+  left:10%;
+  color: white;
+}
+
+
+.container input:checked ~ .checkmark:after {
+  display: block;
 }
 
 .form-container {
   position:absolute;
   max-width: 100%;
-  max-height: 100%;
-  padding-left: 2%;
-  padding-right: 2%;
-  background-color: inherit;
+  left:0;
+  right:0;
+  padding:13%;
+  padding-bottom:0%;
+  background-color: rgba(210,183,107,0.4);
+
+}
+
+label {
+
 }
 
 .form-container input[type=text], .form-container input[type=password] {
   width: 100%;
-  padding: 15px;
-  margin: 10px 0 20px 0;
+  padding: 1.5%;
+  margin: 1vmin 0 3vmin 0;
   border: none;
-  background: inherit;
-  font-size: 15px;
-  box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.2);
+  background: rgba(248,248,255,0.5);
+  font-size: 2vmin;
+  box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
 }
 
 
@@ -67,36 +134,12 @@ form {
 }
 
 
-.form-container .cancel {
-  background-color: red;
-  font-size: 15px;
-  margin-left: 1%;
-  width: 20%;
-  margin-bottom: 0px;
-
-}
-
-
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
 
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
 
 
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 2vmin;
-  width: 2vmin;
-  background-color: inherit;
-  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
-}
 
 
 
@@ -141,8 +184,8 @@ form {
 
 <div id="myForm">
   <form action="mailto:lydiah123@gmail.com" enctype="multipart/form-data" class="form-container" method="GET">
-    <h3 style="margin:1%; margin-bottom:0%">List Credits</h3>
-    <p3 style="margin:1%; margin-bottom:1%; font-size:14px; color: gray;">(You will be redirected to an email template)</p3>
+    <h3 style="margin:1%; margin-bottom:0%;font-size:3vmin;">List Credits</h3>
+    <p3 style="margin:1%; margin-bottom:1%; font-size:1.5vmin; color: gray;">(You will be redirected to an email template)</p3>
     <br>
     <br>
     <br>
@@ -154,18 +197,34 @@ form {
 
     <label for="email"><b>Return Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
+    <br><br>
+    <label for="number"><b>Quantity to Sell:</b></label>
+    <input type="text" placeholder="Enter Number of Credits" name="number" style="width:20%" required>
 
-    <label for="number"><b>Number of Credits to Sell</b></label>
-    <input type="text" placeholder="Enter Available Credits" name="number" required>
 
-    <label for="price"><b>Desired Price Per Credit</b></label>
-    <input type="text" placeholder="Enter Price" name="price" required>
+    <label for="price" style="position:relative; left:20%;"><b>Listing Price: </b>   $</label>
+    <input type="text" placeholder="Enter Price" name="price" style="position:relative; width:11%; left:20%;" required>
+    <label style="position:relative; left:20%;">/credit</label>
 
-    <label for="offers"><b>Accept Other Offers?</b></label>
-    <input type="text" placeholder="Enter Yes/No" name="offers" required>
 
-    <label for="promote"><b>Promote Listing (boost views for a 7% higher selling fee)</b></label>
-    <input type="text" placeholder="Enter Yes/No" name="promote" required>
+    <br>
+    <label for="offers" class="container"><b>Allow Other Offers</b>
+    <input type="checkbox" name="offers" id="offers">
+    <span class="checkmark"></span>
+    </label>
+
+    <div class="popup" onclick="popup1()">?
+    <span class="popuptext" id="myPopup1">Buyers can submit offers with alternate quantities and/or prices.</span>
+    </div>
+
+    <br>
+    <label for="promote" class="container"><b>Promote Listing</b>
+    <input type="checkbox" name="promote" id="promote">
+    <span class="checkmark"></span>
+    </label>
+    <div class="popup" onclick="popup2()">?
+    <span class="popuptext" id="myPopup2">Boost your project to the top of the page to get more clicks for a 7% additional service fee.</span>
+    </div>
 
 
 <br>
@@ -178,17 +237,30 @@ form {
 <br>
     <label for="comments"><b>Additional Comments</b></label>
     <input type="text" placeholder="Enter Comments" name="comments">
-    <br>
-        <button type="submit" class="btn">Submit</button>
+    <br><br>
+    <div style="background-color: rgba(248,248,255,0.5);">
+  <br><p3 style="font-size:2vmin; color: black; font-weight:bold; margin-left:5%;">Vendor Agreement</p3>
+    <br><br><p3 style="font-size:2vmin; color: black; margin-left:5%">By signing I agree to pay the relevant service fee as given below to Carbon Commerce upon accepting an offer for this listing. </p3>
+    <br><p3 style="font-size:2vmin; color: black; margin-left:10%">Carbon Commerce collects a 1.8% service fee for standard posts.</p3>
+    <br><p3 style="font-size:2vmin; color: black; margin-left:10%">Carbon Commerce collects a 2.5% service fee for promoted posts.</p3>
+    <br><p3 style="font-size:2vmin; color: black; margin-left:5%">The service fee is calculated using the final, total balance to be sent from the buyer to the seller. </p3>
+<br><br>
+    <label for="sign" style="margin-left:5%;"><b>Signature</b></label>
+    <input type="text" placeholder="Your Full Name" name="sign" style="width:30%; padding:1vmin;" required>
+
+    <label for="date" style="margin-left:5%;"><b>Today's Date</b></label>
+    <input type="text" placeholder="MM/DD/YYYY" name="date" style="width:12%; padding:1vmin;" required>
+</div>
+    <br><br>
+    <p3 style="font-size:1.8vmin; color: gray;">Upon submission you will be redirected to an email template.<br>You do not need to add anything - simply click send.</p3>
+    <br><br><p3 style="font-size:1.8vmin; color: gray;">Your listing will be reviewed by our team to ensure validity.<br>We will send you a follow-up email within two business days.</p3>
+
+        <button type="submit" class="btn">Submit for Review</button>
+        <br>
 
 
-        <p> Carbon Commerce lists standard posts at 1.8% above the desired price to include the service fee.</p>
-
-          <p> Carbon Commerce lists promoted posts at 2.5% above the desired price to include the service fee. Promoted listings are displayed at the top of the page to boost views.</p>
-
-
-        <p> If this method does not work, please sumbit the above information to lydiah123@gmail.com</p><br><br>
-
+        <p> If this form does not work, please sumbit the above information to lydia@carbon-commerce.com</p>
+        <br><br>
   </form>
 
 
@@ -196,6 +268,16 @@ form {
 </div>
 
 
+<script>
+function popup1() {
+  var popup = document.getElementById("myPopup1");
+  popup.classList.toggle("show");
+}
+function popup2() {
+  var popup = document.getElementById("myPopup2");
+  popup.classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
