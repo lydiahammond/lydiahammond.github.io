@@ -8,50 +8,132 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
-  p2 {
-    width: 45%;
-    font-size: 1.8vmin;
-    font-weight: ;
-    top: 52%;
-    left: 5%;
-    line-height: 200%;
-    position: absolute;
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
-    border-radius: 0.5vmin;
-    text-align:left;
-    padding:2%;
-    background-color: rgba(240, 240, 240, 0.3);
+  .head {
+    position: fixed;
+    top:38.5%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    opacity: 0.7;
+    z-index:9999;
   }
 
-  p3 {
-    width: 45%;
-    font-size: 1.8vmin;
-    font-weight:;
-    top: 110%;
-    left: 5%;
-    line-height: 150%;
-    position: absolute;
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
-    border-radius: 0.5vmin;
-    text-align:left;
-    padding:2%;
-    background-color: rgba(240, 240, 240, 0.3);
+  .topnav {
+    overflow: hidden;
+    background-color: inherit;
+    padding-top: 7%;
+
   }
 
-p4 {
-  width: 45%;
-  font-size: 1.8vmin;
-  font-weight:;
-  top: 80%;
-  left: 5%;
-  line-height: 150%;
-  position: absolute;
-  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
-  border-radius: 0.5vmin;
-  text-align:left;
-  padding:2%;
-  background-color: rgba(240, 240, 240, 0.3);
-}
+  .topnav a {
+    font-weight:bold;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 2vmin 5vmin;
+    text-decoration: none;
+    font-size: 2vmin;
+    opacity:0.7;
+  }
+
+
+  .chead {
+    float:none;
+    top: 50%;
+    left: 52%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    opacity:0.8;
+  }
+
+  .chead:hover {
+
+  }
+
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 2vmin;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 2vmin 5vmin;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    font-weight:bold;
+    opacity:0.7;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255,250,250);
+    width: 25vmin;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 1.5vmin 2vmin;
+    font-size: 1.8vmin;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-weight:normal;
+  }
+
+  .dropbtn:hover {
+    background-color: rgba(255,240,245,0.5);
+    cursor: pointer;
+  }
+
+  .dropbtn2:hover {
+    background-color: ;
+    cursor: pointer;
+  }
+
+  .dropdown-content2 {
+    display: none;
+    position: absolute;
+    bottom:110%;
+    width:150%;
+    left:-30%;
+    background-color: inherit;
+    z-index: 1;
+    font-size:3vmin;
+  }
+
+  .dropdown-content2 a {
+    float: none;
+    color: black;
+    padding: 1.5vmin 2vmin;
+
+    text-decoration: none;
+    display: block;
+
+  }
+
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown2:hover .dropdown-content2 {
+    display: block;
+  }
+
 
 
 </style>
@@ -62,14 +144,17 @@ p4 {
     <!-- Top navigation -->
     <div class="topnav">
 
-      <img src="skypatrickjanser.jpg" alt="Sky" width="100%" height="19.5%" style="position:fixed; z-index: -99; top:0; left:0; opacity:0.5;">
+      <img src="purplesky.jpg" alt="Sky" width="100%" height="100%" style="position:fixed; z-index: -99; top:0; left:0; opacity:1;">
 
 
       <!-- Centered link -->
+      <div class="dropdown2">
       <div class="chead">
-        <a href="maint.html"><img src="headerimage.png" alt="Carbon Commerce" width="250vmin" height="50vmin" style="top:0;left:0;background-color:inherit;">
+        <a href="maint.html" class="dropbtn2"><img src="headerimage.png" alt="Carbon Commerce" width="500vmin" height="100vmin" style="top:0;left:5%;background-color:inherit;">
   </a>
-      </div>
+  <div class="dropdown-content2" style="text-align:center;line-height:350%;">Buy and sell carbon credits today.<br> <b>No</b> subscription fee.<br><b>No</b> hassle.</div>
+
+      </div></div>
 
       <!-- Left-aligned links (default) -->
       <div class="dropdown">
@@ -82,7 +167,7 @@ p4 {
     </div>
 
     <div class="dropdown">
-      <a class="dropbtn">All Projects
+      <a class="dropbtn">Database
       </a>
       <div class="dropdown-content">
         <a href="projectlist.html">List View</a>
@@ -93,7 +178,7 @@ p4 {
 
       <!-- Right-aligned links -->
       <div class="rhead">
-        <a href="#search" class="dropbtn">Search</a>
+        <a href="#search" class="dropbtn">Resources</a>
         <a href="contact.html" class="dropbtn">Contact</a>
       </div>
 
@@ -101,19 +186,6 @@ p4 {
 
   </div>
 
-<p style="position:absolute;top:40%;left:30%;">  TEMP PAGE</p>
-
-
-<p2><strong style="font-size:3vmin;">Welcome to Carbon Commerce!</strong> <br><br>We hope to streamline carbon trading by allowing users to easily sell and purchase credits of <i>any</i> verifier (so far just the US, but hopefully soon everywhere!).</p2>
-
-<p3><strong style="font-size:3vmin;">Want to learn more about carbon credits?</strong><br><br><br>
-FAQs regarding carbon credit purchasing are answered by <a target="_blank" href="https://secondnature.org/climate-action-guidance/purchasing-carbon-offsets-faqs/">Second Nature</a>. They also provide a helpful list of additional resources.
-<br><br>View the most recent <a target="_blank" href="https://www.forest-trends.org/publications/voluntary-carbon-markets/">voluntary carbon market report</a> from Ecosystem Marketplace.
-<br><br>Carbon credit "crash course": <a target="_blank" href="https://www.forbes.com/sites/erikkobayashisolomon/2020/03/13/want-to-understand-carbon-credits-read-this/?sh=5fd200d571aa">Want to Understand Carbon Credits? Read This</a> published in Forbes by Erik Kobayashi-Solomon, an investor in climate change adaptation and mitigation businesses.</p3>
-<p4><strong style="font-size:3vmin;">Not sure where to start?</strong><br><br><br><br><br><br><br>
-<a class="buy" href="purchase.html">I am a buyer</a>
-<a class="sell" href="sell.html">I am a seller</a>
-</p4>
 
 </body>
 </html>
