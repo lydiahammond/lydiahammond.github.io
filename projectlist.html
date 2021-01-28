@@ -10,25 +10,29 @@
 <style>
 
   #myTable {
+    table-layout: fixed;
     position: absolute;
-    top: 43%;
+    top: 32%;
     border-collapse: collapse;
     width: 94%;
     border: 1px solid #ddd;
-    font-size: 2vmin;
+    font-size: 1.8vmin;
     margin-left:3%;
     margin-right:3%;
+    z-index:-9999;
+    letter-spacing:0.1vmin;
 
   }
 
   #myTable th {
     text-align: left;
-    padding: 1%;
-    padding-left: 0;
-    white-space:wrap;
 
 
-    z-index: 9999;
+    font-size: 1.9vmin;
+    width:17%;
+    padding:1%;
+
+    z-index: 0;
 
   }
 
@@ -42,20 +46,22 @@
   #myTable tr {
     border-bottom: 1px solid #ddd;
     padding: ;
-    font-size: 2vmin;
+    font-size: 1.9vmin;
+
 
   }
 
   #myTable tr.header {
-    background-color: rgba(255,228,225,0.1);
-
-    top:36%;
-
-    z-index: 9999;
+    background-color: rgba(255,228,225,0.7);
+    padding-top:3%;
+    position: fixed;
+    z-index: 0;
+    width:94%;
+    top:19.5%;
   }
 
   #myTable tr.header:hover {
-    background-color: rgba(255,228,225,0.1);
+    background-color: rgba(255,228,225,0.7);
   }
 
   #myTable tr:hover {
@@ -67,8 +73,8 @@
 
   table {
     border-spacing: 0;
-    width: 94%;
     border: 1px solid #ddd;
+    word-wrap: break-word;
 
   }
 
@@ -80,57 +86,23 @@
     background-color: rgba(255, 255, 255, 0.5);
   }
 
-  table td:last-child {
-      word-break: break-all;
-      width: 22%;
-  }
 
-  table td:first-child {
+    td:last-child {
       word-break: break-all;
-      width: 25%;
-  }
 
-  table td:nth-child(4) {
-      word-break: break-all;
-      width: 20%;
-  }
-
-  table td:nth-child(3) {
-      word-break: break-all;
-      width: 5%;
-  }
-
-  table td:nth-child(5) {
-      word-break: break-all;
-      width: 8%;
-  }
-
-  table td:nth-child(2) {
-      word-break: break-all;
-      width: 20%;
-  }
-
+    }
 
 
 
 
   p {
+      position:relative;
       text-align:center;
-      font-weight: bold;
-      font-size: 1.6vmin;
-      background-color: inherit;
-      margin-bottom:45%;
-
-    }
-
-  p1 {
-      position: absolute;
-      padding: ;
-      top: 55%;
-      left: 30%;
-      text-align:center;
-      font-weight: bold;
-      font-size: 2vmin;
+      font-weight: ;
+      font-size: 1.8vmin;
+      background-color: white;
+      margin-bottom:0%;
+      padding-top:5%;
     }
 
     .column {
@@ -144,15 +116,73 @@
       }
 
   .total {
-      position:absolute;
-
-      top: 24%;
-      right: 8%;
+      position:relative;
+      width:60%;
+      margin-top:5%;
+      padding-bottom:1.5vmin;
+      bottom: 0%;
+      left: 10%;
       box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
-      background-color: inherit;
+      background-color: white;
       border-radius: 1vmin;
-      z-index: 999;
     }
+
+  #mySidebar {
+    top:19.5%;
+    width:20%;
+    right:0%;
+    height:100%;
+    display:none;
+    position:fixed;
+    background-color:white;
+    opacity:0.9;
+
+  }
+
+  #filteropenbtn {
+      position: fixed;
+      font-size:5vmin;
+      font-weight:bold;
+      background-color: rgba(176,224,230,0.9);
+      border:none;
+      border-radius:0.5vmin;
+      opacity:0.9;
+      padding:0.6vmin;
+      padding-top:0;
+      padding-right:1vmin;
+      padding-left:1vmin;
+      top: 20%;
+      right:0%;
+
+    }
+
+  #filterclosebtn {
+    font-size:5vmin;
+    background-color: rgba(176,224,230,0.9);
+    border:none;
+    font-weight:bold;
+    border-radius:0.5vmin;
+    opacity:0.9;
+    padding:0.6vmin;
+    padding-top:0;
+    padding-right:1vmin;
+    padding-left:1vmin;
+    position:relative;
+
+  }
+
+  .ptypes2 {
+
+    opacity:1;
+    background-color:red;
+    position: relative;
+
+    height: 100%;
+    padding-left:10%;
+
+    width:100%;
+  }
+
 
 
 
@@ -188,7 +218,7 @@
     </div>
 
     <div class="dropdown">
-      <a class="dropbtn" style="background-color: rgba(255,250,250,0.3); border-radius: 1vmin;">All Projects
+      <a class="dropbtn" style="background-color: rgba(255,250,250,0.3); border-radius: 1vmin;">Database
       </a>
       <div class="dropdown-content">
         <a href="projectlist.html">List View</a>
@@ -208,20 +238,23 @@
 
   </div>
 
+<h3 style="position:absolute;top:20%;width:100%;text-align:center;letter-spacing:0.1vmin;font-size:2vmin;">All Existing U.S. Emission Offset Projects</h3>
+
+<div class="filter"  id="mySidebar">
+    <button onclick="filterclose()" id="filterclosebtn" style="z-index:9999;">&#8614</button>
+<p style="position:relative;left:0%;top:-3%;margin:0;padding:0;font-size:2vmin;letter-spacing:0.1vmin;">Search + Filter</p>
+
+<div class="ptypes2" style="position:absolute;z-index:9999;background-color:white;letter-spacing:0.1vmin;">
+
+
+<input type="text" id="myInputnames" onkeyup="myFunctionNames()" placeholder="Search by project name.." title="Type in a name">
+<br><input type="text" id="myInputdevs" onkeyup="myFunctionDevs()" placeholder="Search by developer.." title="Type in a developer">
 
 
 
+<h3 style="position:absolute; left:30%; top:12%; font-size:1.6vmin;margin-top:5%;letter-spacing:0.1vmin;">Project Types</h3>
 
-<div class="ptypes" style="position:absolute;">
-
-<input type="text" id="myInputnames" onkeyup="myFunctionNames()" placeholder="Search by project name.." title="Type in a name" style="background-color:inherit; position:absolute; top: 80%; left: 10%;">
-<br><input type="text" id="myInputdevs" onkeyup="myFunctionDevs()" placeholder="Search by developer.." title="Type in a developer" style="background-color:inherit; position: absolute; top: 80%; left: 40%;">
-
-
-
-<h3 style="position:absolute; left:36%; top:5%; font-size:1.8vmin;">Project Types</h3>
-
-<div class="column">
+<br>
 <label class="container">All
   <input type="checkbox" id="myCheckAllT" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
@@ -236,8 +269,8 @@
   <input type="checkbox" id="myCheckLivestock" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-</div>
-<div class="column">
+<br>
+
 <label class="container">Agriculture
   <input type="checkbox" id="myCheckAgriculture" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
@@ -252,8 +285,7 @@
   <input type="checkbox" id="myCheckLandfill" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-</div>
-<div class="column">
+<br>
 <label class="container">Energy Industry
   <input type="checkbox" id="myCheckEnergy" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
@@ -268,8 +300,7 @@
   <input type="checkbox" id="myCheckMine" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-</div>
-<div class="column">
+<br>
 <label class="container">Industrial
   <input type="checkbox" id="myCheckIndustrial" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
@@ -284,22 +315,25 @@
   <input type="checkbox" id="myCheckTransportation" onclick="myFunctionChecksT()">
   <span class="checkmark"></span>
 </label>
-</div>
-</div>
+
+
 
 <div class=total>
-<p>Project Total:</p>
-<p1 id="rows">1029</p1>
+<p id="rows">Project Total: 1029</p>
+</div>
+</div>
 </div>
 
-<table id="myTable" style="width:100%;">
+  <button class="filterbtn" id="filteropenbtn" onclick="filteropen()">&#8612</button>
+
+<table id="myTable">
   <tr class="header">
-    <th style="width:25%;">Project Name</th>
-    <th style="width:20%;">Project Developer</th>
-    <th style="width:5%;">Verifier</th>
-    <th style="width:20%;">Project Type</th>
-    <th style="width:8%;">Credits Registered</th>
-    <th style="width:22%;">Additional Information</th>
+    <th>Project Name</th>
+    <th>Project Developer</th>
+    <th>Verifier</th>
+    <th>Project Type</th>
+    <th>Credits Registered</th>
+    <th>Additional Information</th>
   </tr>
 
   <tr>	<td><a target="_blank" onmouseover="javascript:window.status='Click here to view information about the			18 Reserves Forest Carbon Project project.'; return true;" onmouseout="javascript:window.status=''; return true;" href="https://acr2.apx.com/mymodule/reg/prjView.asp?id1=586">18 Reserves Forest Carbon Project</a></td>		<td><a target="_blank" onmouseover="javascript:window.status='Click here to view information about the The Climate Trust account.'; return true;" onmouseout="javascript:window.status=''; return true;" href="https://acr2.apx.com/mymodule/reg/accview.asp?id1=247">The Climate Trust</a></td>	<td>	ACR	</td><td>	Forest Carbon		</td><td>		</td><td>	Registered</td>
@@ -1637,13 +1671,24 @@ function myFunctionChecksT() {
 }
 
 function total(totalrows) {
-  return totalrows;
+  return "Project Total:  " + totalrows;
 }
 
 
+function filteropen() {
 
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("filteropenbtn").style.display = "none";
+}
 
+function filterclose() {
+
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("filteropenbtn").style.display = "block";
+
+}
 </script>
+
 
 </body>
 </html>
